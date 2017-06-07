@@ -1,0 +1,10 @@
+#Wed Jun 01 15:30:32 CST 2016
+TOMCAT_HOME=E\:\\JSP2\\JSP\\opensource\\Tomcat6
+TOMCAT_TEMP=E\:\\JSP2\\JSP\\opensource\\Tomcat6\\temp
+LIBRARY_PATH="C\:\\Program Files\\Java\\jre1.8.0_25\\bin;E\:\\JSP2\\JSP\\opensource\\Tomcat6\\bin"
+TOMCAT_BASE=E\:\\JSP2\\JSP\\opensource\\Tomcat6
+ENDORSED_DIRS="E\:\\JSP2\\JSP\\opensource\\Tomcat6/common/endorsed"
+eclipse.preferences.version=1
+JDK_INSTALLATION_NAME=jre1.8.0_25
+JDK_HOME=C\:\\Program Files\\Java\\jre1.8.0_25
+SERVER_ENABLEMENT=true

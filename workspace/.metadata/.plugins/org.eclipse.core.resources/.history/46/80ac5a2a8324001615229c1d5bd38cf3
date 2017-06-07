@@ -1,0 +1,180 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page import="com.yfc.valueBean.*" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%
+String path = request.getContextPath();
+pageContext.setAttribute("ctx",path);
+%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>julysummer</title>
+		<link rel="stylesheet" href="${ctx}/front/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="${ctx}/front/css/all.css" />
+		<link rel="stylesheet" href="${ctx}/front/css/learn.css" />
+	</head>
+	<body>
+	<header>
+	    <!--background-->
+		<div id="bg"><img id="bimg" src="${ctx}/front/img/bg.jpg" alt="" /></div>
+	    <!--导航栏-->
+		<nav id="nav1" class="navbar navbar-inverse ">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand">ForrestYuan</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li><a href="${ctx}/">首页<span class="sr-only">(current)</span></a></li>
+		        <li class="active"><a href="javascript:void(0)">学无止境</a></li>
+		        <li><a href="light.html">光影点滴</a></li>
+		        <li><a href="leaveword.html">留言板</a></li>
+		         <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多<span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="AboutMe.html">关于我</a></li>
+		            <li><a href="javascript:void(0)">点我收藏</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		      <form id="log" class="navbar-form navbar-left" action="" method="post">
+	            <div class="form-group">
+	              <input type="text" placeholder="Email" class="form-control">
+	            </div>
+	            <div class="form-group">
+	              <input type="password" placeholder="Password" class="form-control">
+	            </div>
+	            <button type="submit" class="btn btn-success">Login</button>
+	          </form>
+	          <form id="search"class="navbar-form navbar-left" action="#" method="post">
+					<div class="form-group">
+						<input class="form-control" type="search" name="search" autocomplete="on" value="" placeholder="寻，你所爱！！" />
+					</div>
+					<div class="form-group">
+						<button class="btn btn-success" type="submit" name="submit">千寻一下</button>
+					</div>	
+	          </form>
+	          	<li><a id="showsearch" onclick="showsearch()" href="javascript:void(0)">千寻一下</a></li>
+	          	<li><a id="hidesearch" onclick="hidesearch()" href="javascript:void(0)">搜索完毕</a></li>
+		        <li><a id="showlog" onclick="showlog()" href="javscript:void(0)">登录</a></li>
+		        <li><a id="hidelog" onclick="hidelog()" href="javscript:void(0)">取消登录</a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+	</header>
+<!--***********************************************主题内容**************************************************-->
+	<!--主体内容-->
+	<span onclick="changebimg()" id="changebg" class="btn btn-warning">换换背景</span>
+	<span id="leavemeword" class="btn btn-danger" role="button"><a href="leaveword.html">给我留言</a></span>
+    <section class="container main">
+	    <section>
+			<div class="eyerow"><h4>分类：</h4></div>
+			<div>
+				<ul class="new_type">
+					<li id="hot" onclick="newsType(1)">程序人生</li>
+					<li id="Inte" onclick="newsType(2)">我的程序猿成长路</li>
+					<li id="vid" onclick="newsType(3)">其它</li>
+				</ul>
+			</div>
+		</section>
+	<!--主体1-->
+		<section id="sec-new2">
+			<div class="wrap_main">
+				<div class="eyerow"><h4>Second:</h4></div>
+				<div class="xiangmu" id="new2">
+					<figure>
+						<img src="${ctx}/front/img/load.gif">
+						<figcaption>
+							<div>
+				    			<span>发布日期：</span>
+				    			<span>浏览数：9</span>
+				    			<span>评论数：0</span>
+				    		</div>
+			 				<h4>HTML5技术精品：盲打高手打飞字</h4>
+						    <p> 打飞字(Z-Type)这是有史以来最酷的一款练习盲打的游戏。视觉效果、射击爆破效果和声音
+						                效果都非常的刺激。这款游戏是用HTML5做成的，曾经获得Mozilla Game On游戏大赛的
+			                    Community Choice Award大奖玩家可以选择关闭游戏音效，轻按ESC按键便可以暂停游戏.
+						    </p>
+			                <p><a class="btn btn-success" href="#" role="button">详细阅读&raquo;</a></p>
+						</figcaption>
+					</figure>
+	            </div>
+	            <div onclick="addInfomation('new2');"  class="overlay"><hr>加载更多</div>	
+			</div>
+		</section>
+	<!--主体2-->
+		<section id="sec-new3">	
+			<div class="wrap_main">
+				<div class="eyerow"><h4>Third:</h4></div>
+				<div id="new3" class="xiangmu">
+					<figure>
+						<img src="${ctx}/front/img/load.gif">
+						<figcaption>
+							<div>
+				    			<span>发布日期：</span>
+				    			<span>浏览数：9</span>
+				    			<span>评论数：0</span>
+				    		</div>
+			 				<h4>HTML5技术精品：盲打高手打飞字</h4>
+						    <p> 打飞字(Z-Type)这是有史以来最酷的一款练习盲打的游戏。视觉效果、射击爆破效果和声音
+						                效果都非常的刺激。这款游戏是用HTML5做成的，曾经获得Mozilla Game On游戏大赛的
+			                    Community Choice Award大奖玩家可以选择关闭游戏音效，轻按ESC按键便可以暂停游戏.
+						    </p>
+			                <p><a class="btn btn-success" href="#" role="button">详细阅读&raquo;</a></p>
+						</figcaption>
+					</figure>
+				</div>
+		        <div onclick="addInfomation('new3');"  class="overlay"><hr>加载更多</div>	
+			</div>
+		</section>
+	<!--主体3-->
+		<section id="sec-new1" >
+			<div class="wrap_main">
+				<div class="eyerow"><h4>First:</h4></div>
+				<div class="xiangmu" id="new1">
+					<figure>
+						<img src="${ctx}/front/img/load.gif">
+						<figcaption>
+							<div>
+				    			<span>发布日期：</span>
+				    			<span>浏览数：9</span>
+				    			<span>评论数：0</span>
+				    		</div>
+			 				<h4>HTML5技术精品：盲打高手打飞字</h4>
+						    <p> 打飞字(Z-Type)这是有史以来最酷的一款练习盲打的游戏。视觉效果、射击爆破效果和声音
+						                效果都非常的刺激。这款游戏是用HTML5做成的，曾经获得Mozilla Game On游戏大赛的
+			                    Community Choice Award大奖玩家可以选择关闭游戏音效，轻按ESC按键便可以暂停游戏.
+						    </p>
+			                <p><a class="btn btn-success" href="#" role="button">详细阅读&raquo;</a></p>
+						</figcaption>
+					</figure>
+		        </div>
+		        <div onclick="addInfomation('new1');"  class="overlay"><hr>加载更多</div>	
+			</div>
+		</section>
+    </section> <!-- /container -->
+    
+<!--******************************************主题内容结束********************************************-->
+    <!--脚部-->
+    <footer>
+   		<span>友情链接：	Null</span>
+        <span><p>&copy; Company 2014</p></span>
+    </footer>
+    <div id="gotop" onclick="flytotop();" class="totop"><a href="#"><img src="${ctx}/front/img/fighter2.png"></a></div>
+    <script src="${ctx}/front/js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="${ctx}/front/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>   
+    <script src="${ctx}/front/js/my.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

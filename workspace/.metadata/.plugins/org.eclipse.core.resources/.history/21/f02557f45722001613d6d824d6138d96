@@ -1,0 +1,70 @@
+package com.yfc.dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.yfc.toolBean.CommonADO;
+import com.yfc.valueBean.AdminBean;
+
+public class AdminDao {
+	private CommonADO commonADO;
+	public AdminDao(){
+		commonADO=CommonADO.getCommonADO();
+	}
+	/*
+	 * 测试类
+	 */
+	private void mian() {
+		// TODO Auto-generated method stub
+		AdminDao ad=new AdminDao();
+		AdminBean ab=ad.queryAdminInfo();
+		System.out.println(ab.getAdminId()+"--"+ab.getUserName()+"--"+ab.getPassword()+"--"+ab.getQq());
+	}
+	/**
+	 * @功能 查询博主的信息
+	 * @返回 封装了博主信息的AdminBean实例对象
+	 */
+	public AdminBean queryAdminInfo(){
+		AdminBean adb=new AdminBean();
+		String sql="select * from admin";
+		ResultSet rs=commonADO.executeSelect(sql);
+		try {
+			while(rs.next()){
+				//adb.setAdminId(rs.getInt("adminId"));
+				adb.setUserName(rs.getString("userName"));
+				//adb.setPassword(rs.getString("password"));
+				adb.setQq(rs.getString("qq"));
+				adb.setEmail(rs.getString("email"));
+				adb.setSex(rs.getString("sex"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return adb;
+	}
+	/**
+	 * @功能 管理员注册
+	 * @功能 single为AdminBean类型参数
+	 * @返回值 boolean类型变量 
+	 */
+	public boolean addAdministrator(AdminBean single){
+		String sql = "insert into article values('"+single.getUserName()+"','"+single.getPassword()+"','"+single.getQq()+"','"+single.getEmail()+"','"+single.getSex()+"')";
+		return commonADO.executeUpdate(sql)==1;
+	}
+	/**
+	 * @功能 查询是否存在某个管理员
+	 * @功能 用户名 userName为String类型变量 密码password为String 类型变量
+	 * @返回值 boolean类型变量 
+	 */
+	public boolean isExist(String userName, String password){
+		String sql="select * from admin where admin='"+userName+"'and password='"+password+"'";
+		ResultSet rs=null;
+		rs=commonADO.executeSelect(sql);
+		if(rs==null){
+			return false;
+		}else{
+			return true;
+		}
+	}
+}

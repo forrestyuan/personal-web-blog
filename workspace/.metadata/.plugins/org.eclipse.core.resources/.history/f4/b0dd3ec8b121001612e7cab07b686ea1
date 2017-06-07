@@ -1,0 +1,18 @@
+package com.yfc.dao;
+
+import com.yfc.toolBean.CommonADO;
+
+public class LeaveDao {
+	private CommonADO commonADO;
+	public LeaveDao(){
+		commonADO=CommonADO.getCommonADO();
+	}
+	
+	/**
+	 * @功能 添加留言、删除留言
+	 * @参数	oper为Sring类型变量  single为ArticleBean类型变量
+	 * @返回值 boolean类型
+	 */
+	
+	
+}

@@ -1,0 +1,45 @@
+package com.yfc.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.yfc.dao.AdminDao;
+import com.yfc.dao.ArticleDao;
+import com.yfc.dao.DiscussDao;
+import com.yfc.valueBean.ArticleBean;
+
+public class learn extends HttpServlet {
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		ArticleDao atd=new ArticleDao();
+		DiscussDao dd=new DiscussDao();
+		String type=request.getParameter("type");
+		List<ArticleBean> articleList=null;
+		if(type.equals("all")){
+			articleList=atd.queryArticle(null, null);
+		}else{
+			articleList=atd.queryArticle(null,type);
+		}
+		//文章列表
+		 for(ArticleBean i:articleList){
+			int countDiscuss=dd.queryDiscussTimes(""+i.getArticleId());
+			i.setDiscussCounts(countDiscuss);
+		}
+		request.setAttribute("articleList",articleList);			//将文章列表保存到attribute中
+		//类型列表
+		List<ArticleBean> typeList=atd.queryArticleType();			
+		request.setAttribute("typeList",typeList);					//将类型列表保存到attribute中
+		
+		RequestDispatcher rdp=request.getRequestDispatcher("/front/learn.jsp");
+		rdp.forward(request, response);
+	}
+
+}

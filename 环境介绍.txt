@@ -1,0 +1,6 @@
+tomcat 6.x
+jre 8u66 or 8u25
+jdk 8u40
+
+myeclipse 2014 pro or 8.5
+sqlserver 2005

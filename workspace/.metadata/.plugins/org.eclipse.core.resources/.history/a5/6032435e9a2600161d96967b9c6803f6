@@ -1,0 +1,21 @@
+/*------------------------时间轴---------------------------*/
+.timeline { list-style-type: none;padding: 0 0 10px 0;position: relative;width:70%;}
+.timeline .event { margin-bottom:20px; padding-right: 40px; position: relative;}
+.timeline .thumb { background-repeat: no-repeat; border-radius: 50% 50% 50% 50%; border: solid 4px #ddd;
+					box-shadow:0 1px 1px rgba(200, 200, 200, 0.5); height: 100px; position: absolute; 
+				   transform: scale(0.8) translateX(24px); width: 100px; left:0; *left:20px; top:0;}
+.timeline .thumb span { bottom: -40px; color: #999; font-size: 15px; font-weight: 700;
+					   position: absolute; text-align: center; text-transform: uppercase; 
+					   width: 100%; left:0;}
+.timeline .inner { margin-left: 230px; perspective: 600px; position: relative; border-color: #F26328;
+				   background:#fff; padding:20px; text-align:left;}
+.timeline .inner:before { border-bottom: 20px solid transparent;border-top: 20px solid transparent;
+						  border-right: 20px solid #fff; content: "";display: inline-block;
+						  top: 37px;position: absolute;left: -20px;}
+.inner:hover{box-shadow: 3px 3px 3px #C0C0C0;color:dodgerblue;}
+.inner p{text-indent: 2em;}
+.timeline label{ display: block; height: 24px; left: 152px; position: absolute; top: 36px; width: 24px; 
+				 border-radius: 50% 50% 50% 50%; color: #41838E; font-size: 26px;  border:#ddd solid 4px; }
+.timeline .event:hover label{ border:dodgerblue solid 4px; }
+
+.reviewOther{width:300px;height:100px;}

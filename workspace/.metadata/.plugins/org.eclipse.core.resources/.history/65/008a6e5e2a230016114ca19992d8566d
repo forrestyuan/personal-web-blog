@@ -1,0 +1,2 @@
+/*留言编辑框*/
+.input-box .col-md-4{background-color:rgba(0,0,0,0.5);color:white;}

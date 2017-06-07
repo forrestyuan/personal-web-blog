@@ -1,0 +1,10 @@
+package yfc118.valuebean;
+
+public class LeaveWordBean {
+	private int id;
+	private String commentContent;
+	private String commentTitle;
+	private String commentTime;
+	private String commentUserEmail;
+	private String commentState;
+}

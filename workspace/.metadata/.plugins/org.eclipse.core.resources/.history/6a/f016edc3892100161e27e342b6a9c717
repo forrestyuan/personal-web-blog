@@ -1,0 +1,10 @@
+package com.yfc.toolBean;
+import java.util.ArrayList;
+import java.util.List;
+public class showRecordByPage {
+	public static List pager(){
+		List result=new ArrayList();
+		
+		return result;
+	}
+}

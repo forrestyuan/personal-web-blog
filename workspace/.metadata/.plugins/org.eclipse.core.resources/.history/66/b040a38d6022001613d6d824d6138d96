@@ -1,0 +1,40 @@
+package com.yfc.servlet;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.yfc.dao.AdminDao;
+import com.yfc.dao.ArticleDao;
+import com.yfc.valueBean.AdminBean;
+import com.yfc.valueBean.ArticleBean;
+
+public class IndexServlet extends HttpServlet {
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doPost(request, response);
+	}
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		/*
+		 * 文章显示，从数据库读取前15条记录保存到 articleList 中。
+		 * 云标签显示，从数据库中读取所有标签，按标签分组，保存到 TypeList中。
+		 * 博主信息，从数据库读取博主信息并保存到adminInfo中。
+		 */
+		ArticleDao atd=new ArticleDao();
+		AdminDao ad=new AdminDao();
+		
+		List<ArticleBean> articleList=atd.queryArticle(null, null); //文章列表
+		request.setAttribute("articleList",articleList);			//将文章列表保存到attribute中
+		
+		List<ArticleBean> typeList=atd.queryArticleType();			//类型列表
+		request.setAttribute("typeList",typeList);					//将类型列表保存到attribute中
+		
+		AdminBean adb=ad.queryAdminInfo();
+		request.setAttribute("adminInfo",adb);
+	}
+}

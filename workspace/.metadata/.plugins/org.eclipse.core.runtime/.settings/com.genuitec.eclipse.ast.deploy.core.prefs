@@ -1,0 +1,13 @@
+#Wed Jun 01 14:56:19 CST 2016
+tomcat6Server.julysummer.shouldBackup=true
+tomcat6Server.julysummer.altContextRoot=
+tomcat6Server.julysummer.IEARProjectName=
+tomcat6Server.julysummer.deployIsOverProject=false
+tomcat6Server.julysummer.deploymentPath=E\:\\JSP2\\JSP\\opensource\\Tomcat6\\webapps\\julysummer
+tomcat6Server.julysummer.contextRoot=/julysummer
+tomcat6Server.julysummer.isUptoDate=true
+tomcat6Server.julysummer.isExploded=true
+eclipse.preferences.version=1
+tomcat6Server.julysummer.type=WebDeployment
+tomcat6Server.julysummer.shouldOverwrite=false
+tomcat6Server.julysummer.isDeployed=true

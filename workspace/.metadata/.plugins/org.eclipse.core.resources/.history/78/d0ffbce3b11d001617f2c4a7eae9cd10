@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>网站模板|个人博客模板免费下载-Forrest个人博客</title>
+		<meta name="keywords" content="个人博客网站模板，个人网站模板，wordpress模板" />
+		<meta name="description" content="提供网站模板（带源码下载），包括html5个人博客网站模板和wordpress个人博客模板下载！需要模板的朋友，可以看看" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/default.css">
+		<link rel="stylesheet" href="css/mokuai.css"/>
+		<script type="text/javascript" src="js/mokuai.js"></script>
+	</head>
+	<body style="background-color: #262626;">
+		<div class="wrap_all">
+			<!--header-->
+			<header>
+			    <div id="header">
+			    	<span><img class="logo" src="images/logo.png"></span>
+			    	<span class="myword"><p id="zuoYouMing">从不羡慕别人的优秀，因为相信自己也可以优秀。闲下来时看看书，书本里的故事，总有你学到的人生。</p></span>
+			    	<span class="logo_pic"><img src="images/logo_pic.jpg"></span>
+			    </div>
+			</header>
+			<!--header end-->
+			<!--nav-->
+			<div id="nav">
+				<ul class="menu">
+                   <li ><a href="index.html">首页</a></li>
+                   <li id="active"><a class="active" href="muban.html">网站模板</a></li>
+                   <li><a href="video.html">视频教程</a></li>
+                   <li><a href="learn.html">学无止境</a></li>  
+                   <li><a href="web.html">WEB实例</a></li>
+                   <li><a href="diary.html">个人日记</a></li>
+                   <li><a href="photo.html">光影点滴</a></li>
+                   <li id="nav_end"><a href="leaveword.html">留言板</a></li>   
+               </ul>
+			</div>	
+			<!--nav end-->
+			<!--main-->
+			<div id="wrap_main">
+				<div class="submenu" id="hsub">
+							<ul>
+								<li id="webfore">个人博客模板</li>
+								<li id="seo">WordPress模板</li>
+								<li id="pro">企业网站模板</li>
+							</ul>
+						</div>
+				<article>
+					<div class="main_left">
+						<div id="yemei">
+							<h4>文章<span>推荐</span></h4>
+						</div>
+						<!--wenzhang-->
+						<div class="txt">
+							<div class="c_one">
+								<h4 class="title">
+									<a href="template.html">文章标题</a>
+									<img class="ziding" src="images/hot.gif" alt="热门">
+								</h4>
+								<p class="author">发布时间：xxxx-xx-xx
+									<span>作者：xxx</span>
+									<span>分类:[<a class="fenlei" href="muban.html">网站模板</a>]</span>
+								</p>
+								<dl class="p_short">
+									<dt>
+										<a href="template.html"><img src="images/art1.jpg" alt="如何建立个人博客？" title="如何建立个人博客？" ></a>
+									</dt>
+									<dd>
+										想必很多人都想建立一个，属于自己的个人博客，把自己的一些学习的经验和经历，通过互联网的形式来分享给别人。通过分享与网友进行互动，让更多的人了解和认识你，并且树立自己在互联网上的个人品牌，其实这就是一种“自媒体”。那么我们怎么去建立自己独立...
+										<br>
+										<span class="yuedu"><a href="template.html">阅读全文&gt;&gt;</a></span>	
+									</dd>
+								</dl>
+							</div>	
+						</div>
+						<div class="txt">
+							<div class="c_one">
+								<h4 class="title">
+									<a href="template.html">文章标题</a>
+									<img class="ziding" src="images/hot.gif" alt="热门">
+								</h4>
+								<p class="author">发布时间：xxxx-xx-xx
+									<span>作者：xxx</span>
+									<span>分类:[<a class="fenlei" href="muban.html">网站模板</a>]</span>
+								</p>
+								<dl class="p_short">
+									<dt>
+										<a href="template.html"><img src="images/art2.jpg" alt="如何建立个人博客？" title="如何建立个人博客？" ></a>
+									</dt>
+									<dd>
+										想必很多人都想建立一个，属于自己的个人博客，把自己的一些学习的经验和经历，通过互联网的形式来分享给别人。通过分享与网友进行互动，让更多的人了解和认识你，并且树立自己在互联网上的个人品牌，其实这就是一种“自媒体”。那么我们怎么去建立自己独立...
+										<br>
+										<span class="yuedu"><a href="template.html">阅读全文&gt;&gt;</a></span>	
+									</dd>
+								</dl>
+							</div>	
+						</div>
+						<div class="txt">
+							<div class="c_one">
+								<h4 class="title">
+									<a href="template.html">文章标题</a>
+									<img class="ziding" src="images/hot.gif" alt="热门">
+								</h4>
+								<p class="author">发布时间：xxxx-xx-xx
+									<span>作者：xxx</span>
+									<span>分类:[<a class="fenlei" href="muban.html">网站模板</a>]</span>
+								</p>
+								<dl class="p_short">
+									<dt>
+										<a href="template.html"><img src="images/art3.jpg" alt="如何建立个人博客？" title="如何建立个人博客？" ></a>
+									</dt>
+									<dd>
+										想必很多人都想建立一个，属于自己的个人博客，把自己的一些学习的经验和经历，通过互联网的形式来分享给别人。通过分享与网友进行互动，让更多的人了解和认识你，并且树立自己在互联网上的个人品牌，其实这就是一种“自媒体”。那么我们怎么去建立自己独立...
+										<br>
+										<span class="yuedu"><a href="template.html">阅读全文&gt;&gt;</a></span>	
+									</dd>
+								</dl>
+							</div>	
+						</div>
+						<div class="txt">
+							<div class="c_one">
+								<h4 class="title">
+									<a href="template.html">文章标题</a>
+									<img class="ziding" src="images/bea.gif" alt="热门">
+								</h4>
+								<p class="author">发布时间：xxxx-xx-xx
+									<span>作者：xxx</span>
+									<span>分类:[<a class="fenlei" href="muban.html">网站模板</a>]</span>
+								</p>
+								<dl class="p_short">
+									<dt>
+										<a href="template.html"><img src="images/art4.jpg" alt="如何建立个人博客？" title="如何建立个人博客？" ></a>
+									</dt>
+									<dd>
+										想必很多人都想建立一个，属于自己的个人博客，把自己的一些学习的经验和经历，通过互联网的形式来分享给别人。通过分享与网友进行互动，让更多的人了解和认识你，并且树立自己在互联网上的个人品牌，其实这就是一种“自媒体”。那么我们怎么去建立自己独立...
+										<br>
+										<span class="yuedu"><a href="template.html">阅读全文&gt;&gt;</a></span>	
+									</dd>
+								</dl>
+							</div>	
+						</div>
+						<div class="txt">
+							<div class="c_one">
+								<h4 class="title">
+									<a href="template.html">文章标题</a>
+									<img class="ziding" src="images/hot.gif" alt="热门">
+								</h4>
+								<p class="author">发布时间：xxxx-xx-xx
+									<span>作者：xxx</span>
+									<span>分类:[<a class="fenlei" href="muban.html">网站模板</a>]</span>
+								</p>
+								<dl class="p_short">
+									<dt>
+										<a href="template.html"><img src="images/art4.jpg" alt="如何建立个人博客？" title="如何建立个人博客？" ></a>
+									</dt>
+									<dd>
+										想必很多人都想建立一个，属于自己的个人博客，把自己的一些学习的经验和经历，通过互联网的形式来分享给别人。通过分享与网友进行互动，让更多的人了解和认识你，并且树立自己在互联网上的个人品牌，其实这就是一种“自媒体”。那么我们怎么去建立自己独立...
+										<br>
+										<span class="yuedu"><a href="template.html">阅读全文&gt;&gt;</a></span>	
+									</dd>
+								</dl>
+							</div>	
+						</div>
+						<div class="txt">
+							<div class="c_one">
+								<h4 class="title">
+									<a href="article.html">文章标题</a>
+									<img class="ziding" src="images/hot.gif" alt="热门">
+								</h4>
+								<p class="author">发布时间：xxxx-xx-xx
+									<span>作者：xxx</span>
+									<span>分类:[<a class="fenlei" href="muban.html">网站模板</a>]</span>
+								</p>
+								<dl class="p_short">
+									<dt>
+										<a href="template.html"><img src="images/art5.jpg" alt="如何建立个人博客？" title="如何建立个人博客？" ></a>
+									</dt>
+									<dd>
+										想必很多人都想建立一个，属于自己的个人博客，把自己的一些学习的经验和经历，通过互联网的形式来分享给别人。通过分享与网友进行互动，让更多的人了解和认识你，并且树立自己在互联网上的个人品牌，其实这就是一种“自媒体”。那么我们怎么去建立自己独立...
+										<br>
+										<span class="yuedu"><a href="template.html">阅读全文&gt;&gt;</a></span>	
+									</dd>
+								</dl>
+							</div>	
+						</div>
+					</div>
+				</article>
+				<aside>
+					<div class="main_right" >
+						<div  class="seat">
+							 <form action="#" method="post">
+							 <input id="search-tx" type="search" name="search" autocomplete="on" value="" placeholder="输入搜索" />
+							 <input id="search-bt" type="submit" name="submit" value="搜索"/>
+							</form>
+							<span id="sea" onclick="searchgo();">点此搜索</span>
+						</div>
+						<div id="module_time">
+							<!--时间-->
+							<h3>Here is the time:<br></h3>
+							<span class="time" id="countTime"></span>
+						</div>
+						<div id="module_hotarticle">
+							<!--热门文章-->
+							<h4>热门文章</h4>
+							<a href="#"><h5>dedecms如何安装多说评论插件</h5></a>
+							<a href="#"><h5>dede文章页如何调用动态浏览量</h5></a>
+							<a href="#"><h5>dede文章页如何调用动态浏览量</h5></a>
+							<a href="#"><h5>简单三步-实现dede站内搜索功能</h5></a>
+							<a href="#"><h5>浅谈：html5和html的区别</h5></a>
+							<a href="#"><h5>一个网站的开发流程</h5></a>
+						</div>
+						<div id="module_userLike">
+							<!--用户关注-->
+							<h4>用户关注</h4>
+							<a href="#"><h5>轻松教你如何查看网站日志</h5></a>
+							<a href="#"><h5>关于网站空间服务器的选择</h5></a>
+							<a href="#"><h5>网站代码该如何优化？</h5></a>
+							<a href="#"><h5>一个网站的开发流程</h5></a>
+							<a href="#"><h5>新手须知：域名该如何选择</h5></a>
+							<a href="#"><h5>利用百度数据来做SEO优化系列（一）</h5></a>
+						</div>
+						<div id="visitor">
+							<h4>最近访客</h4>
+							<span><i><img src="touxiang/babytchi.png"></i>用户名称</span>
+							<span><i><img src="touxiang/gozarutchi.png"></i>用户名称</span>
+							<span><i><img src="touxiang/hanatchi.png"></i>用户名称</span>
+							<span><i><img src="touxiang/hinotamatchi.png"></i>用户名称</span>
+							<span><i><img src="touxiang/kinakomotchi.png"></i>用户名称</span>
+							<span><i><img src="touxiang/mimitchi.png"></i>用户名称</span>
+							<span><i><img src="touxiang/mimitchi1.png"></i>用户名称</span>
+							<span><i><img src="touxiang/kuchipatchi1.png"></i>用户名称</span>
+							<span><i><img src="touxiang/hinotamatchi.png"></i>用户名称</span>
+						</div>
+						<div id="module_leavewords">
+							<!--留言-->
+							<h4>留言一刻</h4>
+								<marquee align="ceter" direction="up" behavior="scroll" onMouseOut="this.start()" onMouseOver="this.stop()" scrollamount="5">
+									<h5><i><img src="touxiang/gozarutchi.png">巅峰：</i>随笔那观光</h5>
+									<h5><i><img src="touxiang/hashizotchi.png">天天：</i>好吧，我是第一次来</h5>
+									<h5><i><img src="touxiang/ichigotchi.png">小阿呆：</i>快点上线啊！！！！！</h5>
+									<h5><i><img src="touxiang/mametchi.png">星空：</i>赶快学学后台吧，只有前端太渣了！</h5>
+									<h5><i><img src="touxiang/mametchi1.png">webHacker：</i>我只看看，不说话！</h5>
+									<h5><i><img src="touxiang/mametchi1.png">网页小王子：</i>HI，I come here for nothing.</h5>
+									<h5><i><img src="touxiang/mametchi3.png">雷蛇：</i>博主太渣，不会后台！哈哈哈。</h5>
+									<h5><i><img src="touxiang/oniontchi.png">阿姆雷斯：</i>什么？后台的功能，你用js来实现，太搞笑了吧。菜鸟吗？</h5>
+									<h5><i><img src="touxiang/robotchi.png">PHPhacker：</i>哎！博主啊，我该说说你什么好呢？快快补补后台知识吧。</h5>
+									<h5><i><img src="touxiang/young mimitchi.png">SEO大师：</i>一看网页的优化就很渣。</h5>
+									<h5><i><img src="touxiang/mimitchi.png">360：</i>同意楼上</h5>
+									<h5><i><img src="touxiang/tarakotchi1.png">百度站长：</i>博主加油！</h5>
+								</marquee>
+						</div>
+						
+					</div>
+				</aside>
+			</div>
+			<!--main end-->
+		</div>
+					<!--footer-->
+		<footer>
+			<div class="ft-info">
+				<ul class="ft-first">
+					<li><a href="#" class="title">博客首页</a></li>
+					<li><a href="#">建博工具</a></li>
+					<li><a href="#">友情链接</a></li>
+				</ul>
+				<ul class="ft-second">
+					<li><a href="#" class="title">联系与合作</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">用户反馈</a></li>
+				</ul>	
+				<p style="font-size:20px;color: #336699; display: inline-block; margin: 50px 0 0 50px;">Design by:小袁 <span>湘ICP备********号-2</span></p>
+			</div>
+			
+			<div class="ft-info2">
+				<ul>
+					<li><a href="#" class="title">关注我们</a></li>
+					<li><a href="#">微博：@xxxxx</a></li>
+					<li>QQ:959670036</li>
+					
+				</ul>
+			</div>
+		</footer>	
+			<!--footer end-->
+		<!--totop-->
+	<div class="scroll" id="scroll" style="display:none;">
+		回到<br>顶部
+	</div>
+	<div class="qq">
+		<a href="leaveword.html">给我<br>留言</a>
+	</div>
+	</div>
+	<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+	</body>
+</html>

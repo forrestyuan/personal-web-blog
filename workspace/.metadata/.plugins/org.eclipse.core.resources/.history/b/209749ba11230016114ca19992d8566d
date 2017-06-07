@@ -1,0 +1,40 @@
+package com.yfc.servlet;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.yfc.dao.ArticleDao;
+import com.yfc.dao.DiscussDao;
+import com.yfc.valueBean.ArticleBean;
+
+public class detail extends HttpServlet {
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+		throws ServletException, IOException {
+		//获得文章ID
+		String id=request.getParameter("id");
+		//得到articleId为id的文章
+		ArticleDao atd=new ArticleDao();
+		ArticleBean temp=new ArticleBean();
+			temp.setArticleId(Integer.parseInt(id));
+			atd.operationArticle("readtimes",temp);//浏览次数加1
+		List<ArticleBean> artiList=atd.queryArticle(id, null);
+			ArticleBean atb=artiList.get(0);
+			request.setAttribute("articleDetails",atb);
+		//得到评论数
+		DiscussDao dd=new DiscussDao();
+			int discussCount=dd.queryDiscussTimes(id);
+			request.setAttribute("discussCounts",discussCount);
+		//跳转到details.jsp界面
+		RequestDispatcher rdp=request.getRequestDispatcher("/front/details.jsp");
+		rdp.forward(request, response);
+		//关闭数据连接
+		atd.closeDB();	
+	}
+
+}

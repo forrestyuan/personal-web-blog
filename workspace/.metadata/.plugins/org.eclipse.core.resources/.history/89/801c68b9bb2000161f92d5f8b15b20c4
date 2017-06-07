@@ -1,0 +1,60 @@
+package com.cjg.tool;
+
+import java.sql.SQLException;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.ResultSetHandler;
+
+public class SQLServerTool {
+	private String dataSourceName;
+	private DataSource ds;
+
+	public SQLServerTool(String dataSourceName) {
+		this.dataSourceName = dataSourceName;		
+	}
+
+	public SQLServerTool() {		
+	}
+
+	public void setDataSourceName(String dataSourceName) {
+		this.dataSourceName = dataSourceName;
+	}
+
+	public void init() {
+		Context initContext;
+		try {
+
+
+		} catch (NamingException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public int update(String sql, String[] param) {
+
+
+		try {
+			
+
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	public Object query(String sql, String[] param, ResultSetHandler rsh) {
+
+
+		try {
+
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+}

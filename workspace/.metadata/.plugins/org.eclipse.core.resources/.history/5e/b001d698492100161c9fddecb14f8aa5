@@ -1,0 +1,64 @@
+package com.cjg.servlet;
+import java.io.IOException;
+import java.util.List;
+import javax.servlet.ServletException;
+import javax.servlet.http.*;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
+
+import com.cjg.tool.SQLServerTool;
+
+public class ManageServlet extends HttpServlet {
+	SQLServerTool db = null;
+	private static final long serialVersionUID = 204655027689309554L;
+
+	public void edit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
+
+
+
+	}
+
+	public void update(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
+
+
+
+
+
+	}
+
+	public void delete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
+
+
+
+
+
+	}
+
+	public void list(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
+
+
+
+
+
+	}
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
+
+
+
+
+	}
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+}

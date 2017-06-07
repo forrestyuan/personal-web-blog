@@ -1,0 +1,62 @@
+package yfc118.dao;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import yfc118.toolsbean.CommonADO;
+import yfc118.valuebean.LeaveWordBean;
+public class comment {
+	private CommonADO commonADO = null;
+
+	public comment() {
+		commonADO =CommonADO.getCommonADO();
+	}
+/*	private int id;
+	private String commentContent;
+	private String commentTime;
+	private String commentUserEmail;
+	private String commentState;*/
+	public boolean operationWord(String oper, LeaveWordBean single) {		
+		/* 生成SQL语句 */
+		String sql = null;
+		if (oper.equals("add"))					//发表留言
+			sql = "insert into comment values("+single.getId()+",'"+single.getCommentContent()+"','"+single.getCommentTime()+"','"+single.getCommentUserEmail()+"'"+single.getCommentState()+"')";		
+		if (oper.equals("delete"))				//删除留言
+			sql = "delete from comment where id=" + single.getId();
+
+		
+		/* 执行SQL语句 */	
+		boolean flag =commonADO.executeUpdate(sql)==0;
+		return flag;
+	}
+	public List queryWord(String type){
+		String sql="";
+		if(type==null||type.equals(""))
+			type="sub";
+		if(type.equals("all"))
+			sql="select * from tb_word order by word_sdTime DESC";
+		else
+			sql="select top 5 * from tb_word order by word_sdTime DESC";
+		List wordlist = null;
+		LeaveWordBean wordBean = null;
+		ResultSet rs = commonADO.executeSelect(sql);
+		if(rs!=null){
+			wordlist=new ArrayList();
+			try {
+				while (rs.next()) {
+					wordBean = new LeaveWordBean();
+					wordBean.setId(rs.getInt("commentId"));
+					wordBean.setCommentContent(rs.getString(2));
+					wordBean.setCommentTime(rs.getString(3));
+					wordBean.setCommentUserEmail(rs.getString(4));
+					wordBean.setCommentState(rs.getString(5));
+					wordlist.add(wordBean);
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}			
+		}
+		return wordlist;
+	}
+}

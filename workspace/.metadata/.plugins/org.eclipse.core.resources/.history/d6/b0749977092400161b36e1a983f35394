@@ -1,0 +1,41 @@
+package com.yfc.dao;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.yfc.toolBean.CommonADO;
+import com.yfc.valueBean.ArticleBean;
+
+public class ShowByPage {
+	private CommonADO commonADO;
+	private ResultSet rs;
+	private int pageSize=0;
+	public ShowByPage(){
+		commonADO =CommonADO.getCommonADO();
+	}
+	public List<ArticleBean> pager(){
+		List<ArticleBean> result=new ArrayList<ArticleBean>();
+		String sql="select * from article";
+		rs=commonADO.executeSelect(sql);
+		try{
+			while(rs.next()){
+				ArticleBean ab=new ArticleBean();
+				ab.setArticleId(rs.getInt("articleId"));
+				result.add(ab);
+			}
+			pageSize=result.size();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	/**
+	 * @功能 查询指定位置开始的指定条数
+	 * @参数 起始位置m为int变量，条数n为终止位置int型变量
+	 * @返回 List对象
+	 */
+	public List<ArticleBean> pager(int m,int n){
+		String sql="select top 10 * from article where articleId not in(select top 20 articleId from article order by articleId)order by articleId"
+	}
+}

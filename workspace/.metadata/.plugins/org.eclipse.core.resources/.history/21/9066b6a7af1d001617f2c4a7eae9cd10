@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>个人日记-Forrest个人博客</title>
+		<meta name="keywords" content="个人日记" />
+		<meta name="description" content=" Forrest个人博客，是记录博主学习和成长的一个自媒体博客。关注于web前端技术和SEO技术的学习研究,同时博客免费提供了html5的个人博客模板（带源码）下载学习！" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/demo.css" />
+		<link rel="stylesheet" href="css/default.css">
+		<link rel="stylesheet" href="css/say.css" />
+		<link rel="stylesheet" type="text/css" href="css/say.css"/>
+		<script type="text/javascript" src="js/mokuai.js"></script>
+	</head>
+	<body style="background-color: #262626;">
+		<div class="wrap_all">
+			<!--header-->
+			<header>
+			    <div id="header">
+			    	<span><img class="logo" src="images/logo.png"></span>
+			    	<span class="myword"><p id="zuoYouMing">从不羡慕别人的优秀，因为相信自己也可以优秀。闲下来时看看书，书本里的故事，总有你学到的人生。</p></span>
+			    	<span class="logo_pic"><img src="images/logo_pic.jpg"></span>
+			    </div>
+			</header>
+			<!--header end-->
+			<!--nav-->
+			<div id="nav">
+				<ul class="menu">
+                   <li ><a href="index.html">首页</a></li>
+                   <li><a href="muban.html">网站模板</a></li>
+                   <li><a href="video.html">视频教程</a></li>
+                   <li><a href="learn.html">学无止境</a></li>  
+                   <li><a href="web.html">WEB实例</a></li>
+                   <li id="active"><a class="active" href="diary.html">个人日记</a></li>
+                   <li><a href="photo.html">光影点滴</a></li>
+                   <li id="nav_end"><a href="leaveword.html">留言板</a></li>   
+               </ul>
+			</div>	
+			<!--nav end-->
+			<!--main-->
+			
+			<div id="main">
+		        <div id="s_about">
+		           <div class="tongy"><p>记录那些点点滴滴的曾经</p></div>
+		           <div id="a_say" >
+						<div class="say_out animated bounceIn">
+			                  <div class="left my_pic">
+			                   		<img src="images/1-14100QG333948.jpg" alt=" 你愿与我一路同行，我将为你背负行囊！---加油 2015~ "/>
+			                  </div>
+			                  <div class="right my_text">
+				                   <p>你愿与我一路同行，我将为你背负行囊！---加油 2015~
+				                     <span>2015-02-19</span>
+				                   </p>
+			                  </div>
+			               </div>
+		               <div class="say_out animated bounceIn">
+		                   <div class="left my_pic">
+		                   		<img src="images/1-14100QG622R6.jpg" alt=" 走着走着 "/>
+		                   </div>
+		                   <div class="right my_text">
+			                   <p>发现一路走来，不经意间已经慢慢的失去了一些东西。
+			                     <span>2014-10-17</span>
+			                   </p>
+		                   </div>
+		               </div>
+		               <div class="say_out animated bounceIn">
+		                  <div class="left my_pic">
+		                   		<img src="images/1-14100QG333948 (1).jpg" alt=" 总有那么一些人 "/>
+		                  </div>
+		                  <div class="right my_text">
+		                   		<p>在这世界上，不管你做得在怎么好，总会有那么50%的人，不会认同你的做法。只有无视他们的存在，才会走得更远。
+		                    	 <span>2014-07-28</span>
+		                   		</p>
+		                  </div>
+		               </div>
+		               <div class="say_out animated bounceIn">
+		                    <div class="left my_pic">
+		                    	<img src="images/1-14100QG333948.jpg" alt=" 逼逼自己 "/>
+		                  	</div>
+		                  	<div class="right my_text">
+		                   		<p>有时候缺的就是破釜沉舟的勇气，把自己逼一逼，才知道自己有多大潜力！
+		                     	<span>2014-05-27</span>
+		                   		</p>
+		                  	</div>
+		               </div>
+		               <div class="say_out animated bounceIn">
+		                  	<div class="left my_pic">
+		                   		<img src="images/1-14100QG2211C.jpg" alt=" 人生 "/>
+		                 	 </div>
+		                  	<div class="right my_text">
+		                   		<p>人生重要的不是所站的位置，而是所朝的方向。
+		                     	<span>2014-05-09</span>
+		                  		 </p>
+		                  	</div>
+		               </div>
+		               <div class="say_out animated bounceIn">
+		                  	<div class="left my_pic">
+		                    <img src="images/1-14100QG622R6.jpg" alt=" 事业 "/>
+		                  	</div>
+		                  	<div class="right my_text">
+		                   		<p>是男人就得对自己狠点，为事业而奋斗。30而立，给自己十年时间。成功与否十年后见！！！加油
+		                     	<span>2014-04-30</span>
+		                   		</p>
+		                    </div>
+		               </div>  
+		               <div class="say_out animated bounceIn">
+		                  	<div class="left my_pic">
+		                    <img src="images/1-14100QG622R6.jpg" alt=" 事业 "/>
+		                  	</div>
+		                  	<div class="right my_text">
+		                   		<p>是男人就得对自己狠点，为事业而奋斗。30而立，给自己十年时间。成功与否十年后见！！！加油
+		                     	<span>2014-04-30</span>
+		                   		</p>
+		                    </div>
+		               </div>
+		               <div class="say_out animated bounceIn">
+		                  	<div class="left my_pic">
+		                    <img src="images/1-14100QG622R6.jpg" alt=" 事业 "/>
+		                  	</div>
+		                  	<div class="right my_text">
+		                   		<p>是男人就得对自己狠点，为事业而奋斗。30而立，给自己十年时间。成功与否十年后见！！！加油
+		                     	<span>2014-04-30</span>
+		                   		</p>
+		                    </div>
+		               </div>  
+		         	</div>
+		        </div>
+		       <div class="fenye">
+		        	<span class="fyl"><a href="#">首页</a></span>
+		        	<ul>
+		        		<li><a href="#">1</a></li>
+		        		<li><a href="#">2</a></li>
+		        	</ul>
+		        	<span class="fyr"><a href="#">尾页</a></span>
+		        	<span class="fyr">1页/共2页</span>
+		        </div>
+		    </div>
+		    
+		<!--main end-->
+		 
+		<!--footer-->
+		<footer>
+			<div class="ft-info">
+				<ul class="ft-first">
+					<li><a href="#" class="title">博客首页</a></li>
+					<li><a href="#">建博工具</a></li>
+					<li><a href="#">友情链接</a></li>
+				</ul>
+				<ul class="ft-second">
+					<li><a href="#" class="title">联系与合作</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">用户反馈</a></li>
+				</ul>	
+				<span class="time" id="countTime"></span>
+				<p style="font-size:20px;color: #336699; display: inline-block; margin: 20px 0 0 20px;">Design by:小袁<span>湘ICP备14011335号-2</span></p>
+			</div>
+			
+			<div class="ft-info2">
+				<ul>
+					<li><a href="#" class="title">关注我们</a></li>
+					<li><a href="#">微博：@xxxxx</a></li>
+					<li>QQ:959670036</li>
+					
+				</ul>
+			</div>
+		</footer>	
+			<!--footer end-->
+		<!--totop-->
+	<div class="scroll" id="scroll" style="display:none;">
+		回到<br>顶部
+	</div>
+	<div class="qq">
+		<a href="leaveword.html">给我<br>留言</a>
+	</div>
+	</div>
+		<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+	</body>
+</html>

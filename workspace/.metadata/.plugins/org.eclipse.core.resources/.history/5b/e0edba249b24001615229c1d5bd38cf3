@@ -1,0 +1,17 @@
+package com.yfc.toolBean;
+
+import java.io.UnsupportedEncodingException;
+/**
+ * @功能 将UTF-8转换为ISO8859-1
+ *
+ */
+public class changeCoding {
+	public static void changeCode(String str){
+		try {
+			String readbt=new String(str.getBytes("UTF-8"),"ISO8859-1");
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

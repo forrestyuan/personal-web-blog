@@ -1,0 +1,5 @@
+package com.cjg.servlet;
+
+public class MessageBook {
+
+}

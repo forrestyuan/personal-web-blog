@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<deployments>
+  <deployment context-root="/MyBlog" deployment-path="G:/JSP/opensource/Tomcat6/webapps/MyBlog" project-name="MyBlog" server-id="tomcat6Server" state="DEPLOYED" type="WEB"/>
+</deployments>

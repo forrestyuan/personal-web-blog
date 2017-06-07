@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>关于Forrest-Forrest个人博客</title>
+		<meta name="keywords" content="Forrest，Forrest个人博客" />
+		<meta name="description" content="Forrest一个不断学习和研究，web前端和SEO技术的90后草根站长" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/default.css">
+		<script type="text/javascript" src="js/mokuai.js"></script>
+	</head>
+	<body style="background-color: #262626;">
+		<div class="wrap_all">
+			<!--header-->
+			<header>
+			    <div id="header">
+			    	<span><img class="logo" src="images/logo.png"></span>
+			    	<span class="myword"><p id="zuoYouMing" >从不羡慕别人的优秀，因为相信自己也可以优秀。闲下来时看看书，书本里的故事，总有你学到的人生。</p></span>
+			    	<span class="logo_pic"><img src="images/logo_pic.jpg"></span>
+			    </div>
+			</header>
+			<!--header end-->
+			<!--nav-->
+			<div id="nav">
+				<ul class="menu">
+                   <li><a href="index.html">首页</a></li>
+                   <li><a href="muban.html">网站模板</a></li>
+                   <li><a href="video.html">视频教程</a></li>
+                   <li><a href="learn.html">学无止境</a></li>
+                   <li id="active"><a class="active" href="web.html">WEB实例</a></li>
+                   <li><a href="diary.html">个人日记</a></li>
+                   <li><a href="photo.html">光影点滴</a></li>
+                   <li id="nav_end"><a href="leaveword.html">留言板</a></li>   
+               </ul>
+			</div>	
+			<!--nav end-->
+			<!--main-->
+			<div id="wrap_main">
+				<div id="xiangmu">
+					<figure>
+						<a target="_blank" href="http://www.webhek.com/misc/z-type"><img src="images/z-type-470x240.jpg"></a><br>
+						<figcaption>
+							<a target="_blank" href="http://www.webhek.com/misc/z-type">HTML5技术精品：盲打高手打飞字</a><br>
+					                    打飞字(Z-Type)这是有史以来最酷的一款练习盲打的游戏。视觉效果、射击爆破效果和声音
+					                    效果都非常的刺激。这款游戏是用HTML5做成的，曾经获得Mozilla Game On游戏大赛的
+		                    Community Choice Award大奖玩家可以选择关闭游戏音效，轻按ESC按键便可以暂停游戏.
+						</figcaption>
+					</figure>
+					<figure >
+						<a target="_blank" href="css3style.html"><img src="images/css3style.jpg"></a><br>
+						<figcaption>
+							<a target="_blank" href="css3style.html">超链接特效</a><br>
+					                    这里提供了各种各样的超链接特性，有些是借助伪元素，有些是借助svg，有些是借助HTML5动画。
+					                    用你的鼠标悬停在这些链接上，给你跟传统链接完全不一样的效果感觉。你需要使用现代浏览器，
+					                    比如谷歌浏览器或火狐浏览器
+						</figcaption>
+					</figure>
+					<figure >
+						<a target="_blank" href="css3style.html"><img src="images/css3style.jpg"></a><br>
+						<figcaption>
+							<a target="_blank" href="css3style.html">超链接特效</a><br>
+					                    这里提供了各种各样的超链接特性，有些是借助伪元素，有些是借助svg，有些是借助HTML5动画。
+					                    用你的鼠标悬停在这些链接上，给你跟传统链接完全不一样的效果感觉。你需要使用现代浏览器，
+					                    比如谷歌浏览器或火狐浏览器
+						</figcaption>
+					</figure>
+					<figure >
+						<a target="_blank" href="css3style.html"><img src="images/css3style.jpg"></a><br>
+						<figcaption>
+							<a target="_blank" href="css3style.html">超链接特效</a><br>
+					                    这里提供了各种各样的超链接特性，有些是借助伪元素，有些是借助svg，有些是借助HTML5动画。
+					                    用你的鼠标悬停在这些链接上，给你跟传统链接完全不一样的效果感觉。你需要使用现代浏览器，
+					                    比如谷歌浏览器或火狐浏览器
+						</figcaption>
+					</figure>
+					<figure >
+						<a target="_blank" href="css3style.html"><img src="images/css3style.jpg"></a><br>
+						<figcaption>
+							<a target="_blank" href="css3style.html">超链接特效</a><br>
+					                    这里提供了各种各样的超链接特性，有些是借助伪元素，有些是借助svg，有些是借助HTML5动画。
+					                    用你的鼠标悬停在这些链接上，给你跟传统链接完全不一样的效果感觉。你需要使用现代浏览器，
+					                    比如谷歌浏览器或火狐浏览器
+						</figcaption>
+					</figure>
+					<figure >
+						<a target="_blank" href="css3style.html"><img src="images/css3style.jpg"></a><br>
+						<figcaption>
+							<a target="_blank" href="css3style.html">超链接特效</a><br>
+					                    这里提供了各种各样的超链接特性，有些是借助伪元素，有些是借助svg，有些是借助HTML5动画。
+					                    用你的鼠标悬停在这些链接上，给你跟传统链接完全不一样的效果感觉。你需要使用现代浏览器，
+					                    比如谷歌浏览器或火狐浏览器
+						</figcaption>
+					</figure>
+					<figure >
+						<a target="_blank" href="css3style.html"><img src="images/css3style.jpg"></a><br>
+						<figcaption>
+							<a target="_blank" href="css3style.html">超链接特效</a><br>
+					                    这里提供了各种各样的超链接特性，有些是借助伪元素，有些是借助svg，有些是借助HTML5动画。
+					                    用你的鼠标悬停在这些链接上，给你跟传统链接完全不一样的效果感觉。你需要使用现代浏览器，
+					                    比如谷歌浏览器或火狐浏览器
+						</figcaption>
+					</figure>
+					<figure >
+						<a target="_blank" href="css3style.html"><img src="images/css3style.jpg"></a><br>
+						<figcaption>
+							<a target="_blank" href="css3style.html">超链接特效</a><br>
+					                    这里提供了各种各样的超链接特性，有些是借助伪元素，有些是借助svg，有些是借助HTML5动画。
+					                    用你的鼠标悬停在这些链接上，给你跟传统链接完全不一样的效果感觉。你需要使用现代浏览器，
+					                    比如谷歌浏览器或火狐浏览器
+						</figcaption>
+					</figure>
+					<figure >
+						<a target="_blank" href="css3style.html"><img src="images/css3style.jpg"></a><br>
+						<figcaption>
+							<a target="_blank" href="css3style.html">超链接特效</a><br>
+					                    这里提供了各种各样的超链接特性，有些是借助伪元素，有些是借助svg，有些是借助HTML5动画。
+					                    用你的鼠标悬停在这些链接上，给你跟传统链接完全不一样的效果感觉。你需要使用现代浏览器，
+					                    比如谷歌浏览器或火狐浏览器
+						</figcaption>
+					</figure>
+                </div>
+                <div class="overlay" style="background-color: #262626;margin-bottom:0px ;"><br><hr></div>
+                <div onclick="addInfomation();"  class="overlay">加载更多</div>	
+			</div>
+			<!--main end-->
+						<!--footer-->
+		<footer>
+		
+			<div class="ft-info">
+				<ul class="ft-first">
+					<li><a href="#" class="title">博客首页</a></li>
+					<li><a href="#">建博工具</a></li>
+					<li><a href="#">友情链接</a></li>
+				</ul>
+				<ul class="ft-second">
+					<li><a href="#" class="title">联系与合作</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">用户反馈</a></li>
+				</ul>	
+				<div id="module_time" style="width:200px;float: left;">
+							<!--时间-->
+							<h3>Here is the time:<br></h3>
+							<span class="time" id="countTime"></span>
+						</div>
+				<p style="font-size:20px;color: #336699; display: inline-block; margin: 15px 0 0 0px;float: right;">Design by:小袁 <span><br>湘ICP备********号-2</span></p>
+			</div>
+			
+			<div class="ft-info2">
+				<ul>
+					<li><a href="#" class="title">关注我们</a></li>
+					<li><a href="#">微博：@xxxxx</a></li>
+					<li>QQ:959670036</li>
+					
+				</ul>
+			</div>
+		</footer>	
+			<!--footer end-->
+		<!--totop-->
+	<div class="scroll" id="scroll" style="display:none;">
+		回到<br>顶部
+	</div>
+	<div class="qq">
+		<a href="leaveword.html">给我<br>留言</a>
+	</div>
+	</div>
+		<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+	</body>
+</html>

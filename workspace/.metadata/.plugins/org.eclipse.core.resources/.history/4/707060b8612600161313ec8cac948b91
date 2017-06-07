@@ -1,0 +1,12 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+
+<!DOCTYPE  html>
+<html>
+<meta charset="UTF-8"/>
+<body>
+<form action='' method='post' enctype='multipart/form-data'>
+请选择要上传的文件<input type='file' name='upfile' size='50'>
+<input type='submit' value='提交'>
+</form>
+</body>
+</html>

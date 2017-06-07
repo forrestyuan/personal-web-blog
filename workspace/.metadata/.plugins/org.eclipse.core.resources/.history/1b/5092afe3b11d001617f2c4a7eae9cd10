@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Forrest个人博客-分享web前端和SEO技术的个人博客网站</title>
+		<meta name="keywords" content="Forrest" />
+		<meta name="description" content=" Forrest个人博客，是记录博主学习和成长的一个自媒体博客。关注于web前端技术和SEO技术的学习研究,同时博客免费提供了html5的个人博客模板（带源码）下载学习！" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/default.css">
+		<link rel="stylesheet" href="css/osSlider.css" />
+		<link rel="stylesheet" href="css/mokuai.css"/>
+		<script type="text/javascript" src="js/mokuai.js"></script>
+		<script src="js/songs.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body style="background-color: #262626;">
+		<div class="wrap_all">
+			
+		<div class="adv" id="ad" style="float:left;">
+			<img src="#">
+			<span onclick="offadver()" class="offadv">关闭广告<span class="x">X</span></span>
+		</div>
+			<!--header-->
+			<header>
+			    <div id="header">
+			    	
+			    	<span><img class="logo" src="images/logo.png"></span>
+			    	<span class="myword"><p id="zuoYouMing">从不羡慕别人的优秀，因为相信自己也可以优秀。闲下来时看看书，书本里的故事，总有你学到的人生。</p></span>
+			    	<span class="logo_pic"><img src="images/logo_pic.jpg"></span>
+			    	
+			    </div>
+			</header>
+			<!--header end-->
+			<!--nav-->
+			<div id="nav">
+				<ul class="menu">
+                   <li id="active"><a class="active" href="index.html">首页</a></li>
+                   <li><a href="muban.html">网站模板</a></li>
+                   <li><a href="video.html">视频教程</a></li>
+                   <li><a href="learn.html">学无止境</a></li>  
+                   <li><a href="web.html">WEB实例</a></li>
+                   <li><a href="diary.html">个人日记</a></li>
+                   <li><a href="photo.html">光影点滴</a></li>
+                   <li id="nav_end"><a href="leaveword.html">留言板</a></li>   
+               </ul>
+			</div>	
+			<!--nav end-->
+			<!--gallery-->
+			<div id="gallery">
+				<div id="left" class="header_content">
+					<div class="htmleaf-container">
+						<div class="slider">
+							<ul class="slider-main">
+								<li><img src="images/ban1.jpg" alt="模板"></li>
+								<li><img src="images/ban2.jpg" alt="模板"></li>
+								<li><img src="images/ban3.jpg" alt="模板"></li>
+								<li><img src="images/ban5.jpeg" alt="模板"></li>
+								<li><img src="images/ban4.jpg" alt="模板"></li>
+								<li><img src="images/ban6.jpg" alt="模板"></li>
+							</ul>
+						</div>
+					</div>
+						<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+						<script src="js/osSlider.js"></script>
+						<script type="text/javascript">
+							var slider = new osSlider({ //开始创建效果
+								pNode:'.slider', //容器的选择器 必填
+								cNode:'.slider-main li', //轮播体的选择器 必填
+								speed:3000, //速度 默认3000 可不填写
+								autoPlay:true //是否自动播放 默认true 可不填写
+							});
+						</script>
+        		</div>
+				<div id="right" >
+					<img src="images/blackborad2.png">
+					<p class="blackborad_words">“每日一语”<br>
+						Life was like a box of chocolate,you never know what you gonna get.
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----Forrest Yuan
+					</p>
+				</div>
+			</div>
+			<!--gallery end-->
+			<!--muban-->
+			<div id="muban">
+				<h2>个人博客模板<span>Blog Template</span></h2>
+				<div class="muban_list">
+					<ul>
+						<li>
+							<a href="template.html#1"><img id="moban1" src="images/qianxun.png"></a>
+							<h4><a href="template.html#1">千寻网</a></h4>
+							<p>千寻网--通过用户的采摘所得的素材汇聚在一起，形成庞大的素材站，在这里，千寻一下，发现你所爱。</p>
+						</li>
+						<li>
+							<a href="template.html#3"><img id="moban2" src="images/julysummer.png"></a>
+							<h4><a href="template.html#3">julysummer</a></h4>
+							<p>julysummer，是记录博主学习和成长的一个自媒体博客。关注于web前端技术和SEO技术的学习研究.</p>
+						</li>
+						<li>
+							<a href="template.html#2"><img id="moban3" src="images/webyfc.png"></a>
+							<h4><a href="template.html#2">web-yfc个人博客</a></h4>
+							<p>web-yfc个人博客，是记录博主学习和成长的一个自媒体博客。关注于web前端技术和SEO技术的学习研究.</p>
+						</li>
+						<li>
+							<a href="template.html#4"><img  id="moban4" src="images/simpleweb.png"></a>
+							<h4><a href="template.html#4">微博客</a></h4>
+							<p>微博客是一种框架结构及其简单，交互性强，但信息展示空间大，让浏览者有一种阔然的感觉。</p>
+						</li>
+	
+					</ul>
+				</div>
+			</div>
+			<!--muban end-->
+			<!--main-->
+			<div id="wrap_main">
+				<article>
+					<div class="main_left">
+						<div id="yemei">
+							<h4>文章<span>推荐</span></h4>
+						</div>
+						<!--wenzhang-->
+						<div class="txt">
+							<div class="c_one">
+								<h4 class="title">
+									<a href="#">文章标题</a>
+									<img class="ziding" src="images/hot.gif" alt="热门">
+								</h4>
+								<p class="author">发布时间：xxxx-xx-xx
+									<span>作者：xxx</span>
+									<span>分类:[<a class="fenlei" href="learn.html">学无止境</a>]</span>
+								</p>
+								<dl class="p_short">
+									<dt>
+										<a href="article.html"><img src="images/art1.jpg" alt="如何建立个人博客？" title="如何建立个人博客？" ></a>
+									</dt>
+									<dd>
+										想必很多人都想建立一个，属于自己的个人博客，把自己的一些学习的经验和经历，通过互联网的形式来分享给别人。通过分享与网友进行互动，让更多的人了解和认识你，并且树立自己在互联网上的个人品牌，其实这就是一种“自媒体”。那么我们怎么去建立自己独立...
+										<br>
+										<span class="yuedu"><a href="article.html">阅读全文&gt;&gt;</a></span>	
+									</dd>
+								</dl>
+							</div>	
+						</div>
+						<div class="txt">
+							<div class="c_one">
+								<h4 class="title">
+									<a href="article.html">文章标题</a>
+									<img class="ziding" src="images/hot.gif" alt="热门">
+								</h4>
+								<p class="author">发布时间：xxxx-xx-xx
+									<span>作者：xxx</span>
+									<span>分类:[<a class="fenlei" href="learn.html">学无止境</a>]</span>
+								</p>
+								<dl class="p_short">
+									<dt>
+										<a href="article.html"><img src="images/art2.jpg" alt="如何建立个人博客？" title="如何建立个人博客？" ></a>
+									</dt>
+									<dd>
+										想必很多人都想建立一个，属于自己的个人博客，把自己的一些学习的经验和经历，通过互联网的形式来分享给别人。通过分享与网友进行互动，让更多的人了解和认识你，并且树立自己在互联网上的个人品牌，其实这就是一种“自媒体”。那么我们怎么去建立自己独立...
+										<br>
+										<span class="yuedu"><a href="article.html">阅读全文&gt;&gt;</a></span>	
+									</dd>
+								</dl>
+							</div>	
+						</div>
+						<div class="txt">
+							<div class="c_one">
+								<h4 class="title">
+									<a href="article.html">文章标题</a>
+									<img class="ziding" src="images/hot.gif" alt="热门">
+								</h4>
+								<p class="author">发布时间：xxxx-xx-xx
+									<span>作者：xxx</span>
+									<span>分类:[<a class="fenlei" href="learn.html">学无止境</a>]</span>
+								</p>
+								<dl class="p_short">
+									<dt>
+										<a href="article.html"><img src="images/art3.jpg" alt="如何建立个人博客？" title="如何建立个人博客？" ></a>
+									</dt>
+									<dd>
+										想必很多人都想建立一个，属于自己的个人博客，把自己的一些学习的经验和经历，通过互联网的形式来分享给别人。通过分享与网友进行互动，让更多的人了解和认识你，并且树立自己在互联网上的个人品牌，其实这就是一种“自媒体”。那么我们怎么去建立自己独立...
+										<br>
+										<span class="yuedu"><a href="article.html">阅读全文&gt;&gt;</a></span>	
+									</dd>
+								</dl>
+							</div>	
+						</div>
+						<div class="txt">
+							<div class="c_one">
+								<h4 class="title">
+									<a href="article.html">文章标题</a>
+									<img class="ziding" src="images/bea.gif" alt="热门">
+								</h4>
+								<p class="author">发布时间：xxxx-xx-xx
+									<span>作者：xxx</span>
+									<span>分类:[<a class="fenlei" href="learn.html">学无止境</a>]</span>
+								</p>
+								<dl class="p_short">
+									<dt>
+										<a href="article.html"><img src="images/art4.jpg" alt="如何建立个人博客？" title="如何建立个人博客？" ></a>
+									</dt>
+									<dd>
+										想必很多人都想建立一个，属于自己的个人博客，把自己的一些学习的经验和经历，通过互联网的形式来分享给别人。通过分享与网友进行互动，让更多的人了解和认识你，并且树立自己在互联网上的个人品牌，其实这就是一种“自媒体”。那么我们怎么去建立自己独立...
+										<br>
+										<span class="yuedu"><a href="article.html">阅读全文&gt;&gt;</a></span>	
+									</dd>
+								</dl>
+							</div>	
+						</div>
+						<div class="txt">
+							<div class="c_one">
+								<h4 class="title">
+									<a href="article.html">文章标题</a>
+									<img class="ziding" src="images/hot.gif" alt="热门">
+								</h4>
+								<p class="author">发布时间：xxxx-xx-xx
+									<span>作者：xxx</span>
+									<span>分类:[<a class="fenlei" href="learn.html">学无止境</a>]</span>
+								</p>
+								<dl class="p_short">
+									<dt>
+										<a href="article.html"><img src="images/art4.jpg" alt="如何建立个人博客？" title="如何建立个人博客？" ></a>
+									</dt>
+									<dd>
+										想必很多人都想建立一个，属于自己的个人博客，把自己的一些学习的经验和经历，通过互联网的形式来分享给别人。通过分享与网友进行互动，让更多的人了解和认识你，并且树立自己在互联网上的个人品牌，其实这就是一种“自媒体”。那么我们怎么去建立自己独立...
+										<br>
+										<span class="yuedu"><a href="article.html">阅读全文&gt;&gt;</a></span>	
+									</dd>
+								</dl>
+							</div>	
+						</div>
+						<div class="txt">
+							<div class="c_one">
+								<h4 class="title">
+									<a href="article.html">文章标题</a>
+									<img class="ziding" src="images/hot.gif" alt="热门">
+								</h4>
+								<p class="author">发布时间：xxxx-xx-xx
+									<span>作者：xxx</span>
+									<span>分类:[<a class="fenlei" href="learn.html">学无止境</a>]</span>
+								</p>
+								<dl class="p_short">
+									<dt>
+										<a href="article.html"><img src="images/art5.jpg" alt="如何建立个人博客？" title="如何建立个人博客？" ></a>
+									</dt>
+									<dd>
+										想必很多人都想建立一个，属于自己的个人博客，把自己的一些学习的经验和经历，通过互联网的形式来分享给别人。通过分享与网友进行互动，让更多的人了解和认识你，并且树立自己在互联网上的个人品牌，其实这就是一种“自媒体”。那么我们怎么去建立自己独立...
+										<br>
+										<span class="yuedu"><a href="article.html">阅读全文&gt;&gt;</a></span>	
+									</dd>
+								</dl>
+							</div>	
+						</div>
+					</div>
+				</article>
+				<aside>
+					<div class="main_right">
+						<div class="seat_inde">
+							 <form action="#" method="post">
+							 <input id="search-tx" type="search" name="search" autocomplete="on" value="" placeholder="输入搜索" />
+							 <input id="search-bt" type="submit" name="submit" value="搜索"/>
+							</form>
+							<span id="sea" onclick="searchgo();">点此搜索</span>
+						</div>
+						<div id="module_time">
+							<!--时间-->
+							<h3>Here is the time:<br></h3>
+							<span class="time" id="countTime"></span>
+						</div>
+						<div id="module_hotarticle">
+							<!--热门文章-->
+							<h4>热门文章</h4>
+							<a href="#"><h5>dedecms如何安装多说评论插件</h5></a>
+							<a href="#"><h5>dede文章页如何调用动态浏览量</h5></a>
+							<a href="#"><h5>dede文章页如何调用动态浏览量</h5></a>
+							<a href="#"><h5>简单三步-实现dede站内搜索功能</h5></a>
+							<a href="#"><h5>浅谈：html5和html的区别</h5></a>
+							<a href="#"><h5>一个网站的开发流程</h5></a>
+						</div>
+						<div id="module_userLike">
+							<!--用户关注-->
+							<h4>用户关注</h4>
+							<a href="#"><h5>轻松教你如何查看网站日志</h5></a>
+							<a href="#"><h5>关于网站空间服务器的选择</h5></a>
+							<a href="#"><h5>网站代码该如何优化？</h5></a>
+							<a href="#"><h5>一个网站的开发流程</h5></a>
+							<a href="#"><h5>新手须知：域名该如何选择</h5></a>
+							<a href="#"><h5>利用百度数据来做SEO优化系列（一）</h5></a>
+						</div>
+						<div id="module_tab">
+							<!--建站必学--><!--织梦后台-->						
+							<div id="con">
+							  <ul id="tags">
+							    <h4><li class="selectTag"><a onMouseover="selectTag('tagContent0',this)" href="javascript:void(0)">建站必学</a> </li></h4>
+							    <h4><li><a onMouseover="selectTag('tagContent1',this)"href="javascript:void(0)">织梦后台</a> </li></h4>
+							  </ul>
+							  <div id="tagContent">
+							    <div id="tagContent0" class="tagContent selectTag">
+							      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+							        <tr>
+							          <td width="22" style="text-align:center; height:24px;color:#ff0000;">*</td>
+							          <td style="text-align:left;"><a href="#">如何建立个人博客？</a></td>
+							        </tr>
+							      	<tr>
+							          <td width="22" style="text-align:center; height:24px;color:#ff0000;">*</td>
+							          <td style="text-align:left;"><a href="#">网站代码该如何优化？</a></td>
+							        </tr>
+							        <tr>
+							          <td width="22" style="text-align:center; height:24px;color:#ff0000;">*</td>
+							          <td style="text-align:left;"><a href="#">一个网站的开发流程</a></td>
+							        </tr>
+							        <tr>
+							          <td width="22" style="text-align:center; height:24px;color:#ff0000;">*</td>
+							          <td style="text-align:left;"><a href="#">新手须知：域名该如何选择</a></td>
+							        </tr>
+							        <tr>
+							          <td width="22" style="text-align:center; height:24px;color:#ff0000;">*</td>
+							          <td style="text-align:left;"><a href="#">如何学习网页制作（个人经验）</a></td>
+							        </tr>
+							        <tr>
+							          <td width="22" style="text-align:center; height:24px;color:#ff0000;">*</td>
+							          <td style="text-align:left;"><a href="#">关于响应式布局</a></td>
+							        </tr>
+							        <tr>
+							          <td width="22" style="text-align:center; height:24px;color:#ff0000;">*</td>
+							          <td style="text-align:left;"><a href="#">不可不知的CSS小技巧</a></td>
+							        </tr>
+							        <tr>
+							          <td width="22" style="text-align:center; height:24px;color:#ff0000;">*</td>
+							          <td style="text-align:left;"><a href="#">学习seo的一些心得</a></td>
+							        </tr>
+							      </table>
+							    </div>
+							    <div id="tagContent1"style="display:none; padding:5px">
+							      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+							        <tr>
+							          <td width="22" style="text-align:center; height:24px;color:#ff0000;">*</td>
+							          <td style="text-align:left;"><a href="#">关于织梦安全问题</a></td>
+							        </tr>
+							        <tr>
+							          <td width="22" style="text-align:center; height:24px;color:#ff0000;">*</td>
+							          <td style="text-align:left;"><a href="#">dedecms如何安装多说评论插件</a></td>
+							        </tr>
+							        <tr>
+							          <td width="22" style="text-align:center; height:24px;color:#ff0000;">*</td>
+							          <td style="text-align:left;"><a href="#">dedecms5.7安装百度(ueditor)编辑器的方</a></td>
+							        </tr>
+							        <tr>
+							          <td width="22" style="text-align:center; height:24px;color:#ff0000;">*</td>
+							          <td style="text-align:left;"><a href="#">dedecms怎么给自定义表单添加验证码功</a></td>
+							        </tr>
+							        <tr>
+							          <td width="22" style="text-align:center; height:24px;color:#ff0000;">*</td>
+							          <td style="text-align:left;"><a href="#">简单三步-实现dede站内搜索功能</a></td>
+							        </tr>
+							        <tr>
+							          <td width="22" style="text-align:center; height:24px;color:#ff0000;">*</td>
+							          <td style="text-align:left;"><a href="#">dede文章页如何调用动态浏览量</a></td>
+							        </tr>
+							        
+							      </table>
+							    </div>
+							  </div>
+							</div>
+							<script type=text/javascript>
+							function selectTag(showContent,selfObj){
+								// 操作标签
+								var tag = document.getElementById("tags").getElementsByTagName("li");
+								var taglength = tag.length;
+								for(i=0; i<taglength; i++){
+									tag[i].className = "";
+								}
+								selfObj.parentNode.className = "selectTag";
+								// 操作内容
+								for(i=0; j=document.getElementById("tagContent"+i); i++){
+									j.style.display = "none";
+								}
+								document.getElementById(showContent).style.display = "block";
+							}
+							</script>
+						</div>
+						<div id="cloud">
+							<h4>云标签</h4>
+							<span><a href="#">标签1</a></span>
+							<span><a href="#">云标签模块</a></span>
+							<span><a href="#">你是吗</a>！</span>
+							<span><a href="#">前端网</a></span>
+							<span><a href="#">javascript</a></span>
+							<span><a href="#">织梦</a></span>
+							<span><a href="#">建站教程</a></span>
+						</div>
+						<div id="module_leavewords">
+							<!--留言-->
+							<h4>留言一刻</h4>
+								<marquee align="ceter" direction="up" behavior="scroll" onMouseOut="this.start()" onMouseOver="this.stop()" scrollamount="5">
+									<h5><i><img src="touxiang/gozarutchi.png">巅峰：</i>随笔那观光</h5>
+									<h5><i><img src="touxiang/hashizotchi.png">天天：</i>好吧，我是第一次来</h5>
+									<h5><i><img src="touxiang/ichigotchi.png">小阿呆：</i>快点上线啊！！！！！</h5>
+									<h5><i><img src="touxiang/mametchi.png">星空：</i>赶快学学后台吧，只有前端太渣了！</h5>
+									<h5><i><img src="touxiang/mametchi1.png">webHacker：</i>我只看看，不说话！</h5>
+									<h5><i><img src="touxiang/mametchi1.png">网页小王子：</i>HI，I come here for nothing.</h5>
+									<h5><i><img src="touxiang/mametchi3.png">雷蛇：</i>博主太渣，不会后台！哈哈哈。</h5>
+									<h5><i><img src="touxiang/oniontchi.png">阿姆雷斯：</i>什么？后台的功能，你用js来实现，太搞笑了吧。菜鸟吗？</h5>
+									<h5><i><img src="touxiang/robotchi.png">PHPhacker：</i>哎！博主啊，我该说说你什么好呢？快快补补后台知识吧。</h5>
+									<h5><i><img src="touxiang/young mimitchi.png">SEO大师：</i>一看网页的优化就很渣。</h5>
+									<h5><i><img src="touxiang/mimitchi.png">360：</i>同意楼上</h5>
+									<h5><i><img src="touxiang/tarakotchi1.png">百度站长：</i>博主加油！</h5>
+								</marquee>
+						</div>
+					</div>
+				</aside>
+			</div>
+			<!--main end-->
+				  <!--music-->
+                <div style="width:1000px; margin:0 auto ;">
+                	<div>
+	                	<h3 style="color: #00FFFF;"><i>would you like to listen to some musics:</i></h3>
+	                	<img style="width: 40px;height:40px;" src="touxiang/gozarutchi.png">
+	                	<span id="tips">please choose music first!</span>
+	                	<span id="listOpen" onclick="showSongsList()">打开歌曲列表</span>
+	            		<span id="listClose" onclick="closeSongsList()">收起歌曲列表</span>
+	                	<span id="placeforaudio"></span>
+                	</div>
+                	<div id="songs-list">
+                		<ul>
+                			<li class="active">轻音乐</li>
+                			<li>
+                				<span class="song"  onclick="playmusic(this);">Capo Productions - Inspire - 纯音乐版.mp3</span>
+                			</li>
+                			<li>
+                				<span class="song" onclick="playmusic(this);">Cma - Changes Will Come.mp3</span>
+                			</li>
+                			<li>
+                				<span class="song" onclick="playmusic(this);">Cma - Faith.mp3</span>
+                			</li>
+                			<li>
+                				<span class="song" onclick="playmusic(this);">Cma - Fragments Of The Past.mp3</span>
+                			</li>
+                			<li>
+                				<span class="song" onclick="playmusic(this);">Cma - It Is What It Is.mp3</span>
+                			</li>
+                			<li>
+                				<span class="song" onclick="playmusic(this);">Cma - Life Goes On - 纯音乐版.mp3</span>
+                			</li>
+                			<li>
+                				<span class="song" onclick="playmusic(this);">Cma - Who We Are.mp3</span>
+                			</li>
+                			<li>
+                				<span class="song" onclick="playmusic(this);">Cma - Within Our Reach.mp3</span>
+                			</li>
+                			<li>
+                				<span class="song"  onclick="playmusic(this);">Cma - You're Free.mp3</span>
+                			</li>
+                		</ul>
+                		<ul>
+                			<li class="active">抒情曲</li>
+                			<li>
+                				<span class="song"  onclick="playmusic(this);">Fiction、电视剧 - Non - 匹诺曹 插曲.mp3</span>
+                			</li>
+                			<li>
+                				<span class="song" onclick="playmusic(this);">Gala - 追梦赤子心.mp3</span>
+                			</li>
+                			<li>
+                				<span class="song" onclick="playmusic(this);">Imagine Dragons - Demons.mp3</span>
+                			</li>
+                			<li>
+                				<span class="song" onclick="playmusic(this);">Tiger Jk - 初恋 - 匹诺曹.mp3</span>
+                			</li>
+                			<li>
+                				<span class="song" onclick="playmusic(this);">冷漠 - 看透爱情看透你 - 看透爱情看透.mp3</span>
+                			</li>
+                			<li>
+                				<span class="song" onclick="playmusic(this);">李行亮 - 愿得一人心.mp3</span>
+                			</li>
+                			<li>
+                				<span class="song" onclick="playmusic(this);">李宇春 - 再不疯狂我们就老了.mp3</span>
+                			</li>
+                			<li>
+                				<span class="song" onclick="playmusic(this);">牛奶咖啡 - 没时间.mp3</span>
+                			</li>
+                			<li>
+                				<span class="song"  onclick="playmusic(this);">朴树 - 平凡之路.mp3</span>
+                			</li>
+                		</ul>
+                		<ul>
+                			<li>
+                				<span class="song"  onclick="playmusic(this);">谭咏麟 - 讲不出再见.mp3</span>
+                			</li>
+                			<li>
+                				<span class="song"  onclick="playmusic(this);">逃跑计划 - 夜空中最亮的星.mp3</span>
+                			</li>
+                		</ul>
+                	</div>
+                </div>	
+		</div>
+			<!--footer-->
+		<footer>
+			<div class="ft-info">
+				<ul class="ft-first">
+					<li><a href="#" class="title">博客首页</a></li>
+					<li><a href="#">建博工具</a></li>
+					<li><a href="#">友情链接</a></li>
+				</ul>
+				<ul class="ft-second">
+					<li><a href="#" class="title">联系与合作</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">用户反馈</a></li>
+				</ul>	
+				<p style="font-size:20px;color: #336699; display: inline-block; margin: 50px 0 0 50px;">Design by:小袁<span>湘ICP备********号-2</span></p>
+			</div>
+			
+			<div class="ft-info2">
+				<ul>
+					<li><a href="#" class="title">关注我们</a></li>
+					<li><a href="#">微博：@xxxxx</a></li>
+					<li>QQ:959670036</li>
+					
+				</ul>
+			</div>
+		</footer>	
+			<!--footer end-->
+		<!--totop-->
+		<div class="scroll" id="scroll" style="display:none;">
+			回到<br>顶部
+		</div>
+		<div class="qq">
+		<a href="leaveword.html">给我<br>留言</a>
+	</div>
+	</div>
+		<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+	</body>
+</html>

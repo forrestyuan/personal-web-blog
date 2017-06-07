@@ -1,0 +1,10 @@
+function activeInput(){
+	var tag2=document.getElementById("adInfo2");
+	var tag1=document.getElementById("adInfo1");
+	var tag3=document.getElementById("adInfo3");
+	tag1.removeAttribute('disabled');
+	tag2.removeAttribute('disabled');
+	tag3.removeAttribute('disabled');
+	alert(tag1.Value)
+	document.getElementById("save").style.display="inline-block";
+}

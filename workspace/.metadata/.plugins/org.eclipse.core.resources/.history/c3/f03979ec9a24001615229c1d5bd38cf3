@@ -1,0 +1,7 @@
+package com.yfc.toolBean;
+
+public class changeCoding {
+	public void changeCode(String str){
+		String readbt=new String(str.getBytes("UTF-8"),"ISO8859-1");
+	}
+}

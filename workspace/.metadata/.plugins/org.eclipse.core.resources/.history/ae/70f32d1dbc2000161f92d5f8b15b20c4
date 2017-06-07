@@ -1,0 +1,19 @@
+package com.cjg.servlet;
+import java.io.IOException;
+import java.util.List;
+import javax.servlet.ServletException;
+import javax.servlet.http.*;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
+import com.cjg.tool.SQLServerTool;
+public class GetMessagesServlet extends HttpServlet {
+	private static final long serialVersionUID = 5964428201228635704L;
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String sql = "select * from guestbook order by id desc";
+		List list = null;
+		SQLServerTool db = new SQLServerTool("java:/comp/env/jdbc/book");
+		db.init();
+		list = (List) db.query(sql, null, new BeanListHandler(MessageBook.class));
+		request.setAttribute("results", list);
+		request.getRequestDispatcher("/getMessages.jsp").forward(request, response);
+	}
+}

@@ -1,0 +1,50 @@
+package com.yfc.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import com.yfc.dao.ShowByPage;
+import com.yfc.valueBean.ArticleBean;
+
+public class loadMore extends HttpServlet {
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		//加载更多事件
+		int m=Integer.parseInt(request.getParameter("start"));
+		System.out.println(m);
+		ShowByPage sbp=new ShowByPage();
+		List<ArticleBean> page=sbp.pager(m,2);
+		System.out.println(page.size());
+		List<String>result=new ArrayList<String>();
+		String brebt="详细阅读";
+		String readbt=new String(brebt.getBytes("UTF-8"),"ISO8859-1");
+		for(ArticleBean i:page){
+			String sig="<img src=\"img/load.gif\">";
+			sig+="<figcaption>";
+			sig+="<h4>"+i.getTitle()+"</h4>";
+			sig+="<p>"+i.getDescription()+"</p>";
+			sig+="<p><a class=\"btn btn-success\" href=\"servlet/detail?id="+i.getArticleId()+"\" role=\"button\">"+readbt+"&raquo;</a></p>";
+			System.out.println(sig);
+			result.add(sig);
+		}
+		response.setHeader("Access-Control-Allow-Origin","*");
+		response.setContentType("text/html;charSet=UTF-8");
+		PrintWriter out=response.getWriter();
+		for(String re:result){
+			out.println(re);
+			System.out.println(re);
+		}
+		out.flush();
+		out.close();
+	//	request.setAttribute("pageResult",result);
+		
+	}
+
+}

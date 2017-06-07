@@ -1,0 +1,251 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page import="com.yfc.valueBean.*" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%
+String path = request.getContextPath();
+pageContext.setAttribute("ctx",path);
+%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>julysummer 后台管理</title>
+		<link rel="stylesheet" href="${ctx}/front/css/bootstrap.min.css">
+		<link rel="stylesheet" href="${ctx}/admin/css/onlyL.css">
+		<link rel="stylesheet" href="${ctx}/admin/css/style.css">
+		<script type="text/javascript" src="${ctx}/admin/js/meny.min.js"></script>
+		<script type="text/javascript" src="${ctx}/admin/js/admin.js"></script>
+	</head>
+	<body>
+	<!-- 代码部分begin -->
+	<nav id="nav1" class="navbar navbar-inverse ">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand">welcome！管理员</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		      	<li id="backToFront"><a href="${ctx}/">返回前台首页</a></li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		      
+	          <form name="formSearch" id="search" class="navbar-form navbar-left" action="goSearch">
+					<div class="form-group">
+						<input name="search" class="form-control" type="text" autocomplete="on"  placeholder="寻，你所爱！！" />
+					</div>
+					<div class="form-group">
+						<input class="btn btn-success" type="submit" value="千寻一下" name="submit"/>
+					</div>	
+	          </form>
+	          <li class="btn-warning"><a href="logout">Log Out</a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+<div class="meny">
+  <h2>管理功能项</h2>
+  <ul>
+  	<ul class="head"><img alt="" src="${ctx}/admin/img/load2.gif"></ul>
+    <li>
+    	<form action="manage" method="post">
+    		name:<input id="adInfo1" disabled type="text" name="username" value="${adminInfo.userName}"/><br>
+    		sex:<input id="adInfo2" disabled type="text" name="sex" value="${adminInfo.sex}"/><br>
+    		qq:<input id="adInfo3" disabled type="text" name="qq" value="${adminInfo.qq}"/><br>
+    		Email:<input id="adInfo4" disabled type="text" name="email" value="${adminInfo.email}"/><br>
+    		password:<input id="adInfo5" disabled type="password" name="password" value="${adminInfo.password}"/><br>
+    		${back}<br>
+    		<input id="act" onclick="activeInput()" class="InfoSet" type="button"  value="启动修改"/>
+    		<input id="save" class="InfoSet" type="submit" name="email" value="保存"/>
+    	</form>
+    </li>
+  </ul>
+</div>
+<div class="meny-arrow"></div>
+<div id="1" class="contents">
+  	<section class="col-md-12 webSitedata">
+  		<div class="col-md-3">
+  			<h1>网站访客数:</h1>
+  			<h2>1000</h2>
+  		</div>
+  		<div class="col-md-3">
+  			<h1>网站文章数:</h1>
+  			<h2>${articleAll}</h2>
+  		</div>
+  		<div class="col-md-3">
+  			<h1>相片总数:</h1>
+  			<h2>${countPic}</h2>
+  		</div>
+  		<div class="col-md-3">
+  			<h1>评论总数:</h1>
+  			<h2>${alldiscuss}</h2>
+  		</div>
+  		<div class="col-md-3">
+  			<h1>留言总数:</h1>
+  			<h2>${allLeave}</h2>
+  		</div>
+  		<div class="col-md-3">
+  			<h1>友情链接数:</h1>
+  			<h2>${linkAll}</h2>
+  		</div>
+  		<div class="col-md-3">
+  			<h1>网站收藏数:</h1>
+  			<h2>150</h2>
+  		</div>
+  	</section>
+  	<section class="col-md-12">
+  			<div class="list-group col-md-4">
+				<div class="panel panel-primary">
+				   <div class="panel-heading">
+				      <h3 class="panel-title h3 ">友情链接管理</h3>
+				   </div>
+				   <div class="panel-body">
+					   <table class="table table-bordered">
+					      <th>LinkLoveZONE</th><th>管理</th>
+					      <c:forEach items="${allLink}" var="alk">
+						      <tr class="warning">
+						      	<td><a href="http://<c:out value="${alk.linkLoveURL}"/>"><c:out value="${alk.linkName}"/></a></td>
+						      	<td><a class="btn btn-default" href="manage?go=link&id=<c:out value="${alk.linkId}"/>">删除</a></td>
+						      </tr>
+					      </c:forEach>
+					   </table>
+				    </div>
+				    <div class="panel-footer">
+				    <form action="addLink" method="post">
+					    <tr class="warning">
+					    	<td><input type="text" name="linkurl" placeholder="添加新友情URL"/></td>
+					    	<td><input type="text" name="linkName" placeholder="新友情链接名称"/></td>
+					    	<td><input  class="btn btn-success" type="submit" value="添加" name="submit"/></td>
+					    </tr>
+				    </form>
+				   </div>
+				</div>
+			</div>
+		<div class="col-md-8">
+			<li class="leave list-group-item active"><h4 class="list-group-item-heading">留言管理区</h4></li>
+			<table class=" table table-bordered list-group-item">
+			  <tbody>
+				  <tr>
+				  	<th style="width:15%;">留言日期</th>
+				    <th style="width:75%;">留言内容列表</th>
+				    <th style="width:10%;">管理</th>
+				  </tr>
+				  <c:forEach items="${leaveEach}" var="leave">
+					  <tr>
+					    <td><c:out value="${leave.time}"/></td>
+					    <td><c:out value="${leave.content}"/></td>
+					    <td><a class="btn btn-default" href="manage?go=leave&id=<c:out value="${leave.leaveId}"/>">删除</a></td>
+					  </tr>
+				 </c:forEach>
+				</tbody>
+			</table>
+		</div>
+  	</section>
+  	<hr>
+  		<!--评论-->
+  	<section class="col-md-12">
+  		<li class="list-group-item active"><h4 class="list-group-item-heading">评论管理区</h4></li>
+  		<c:forEach items="${discussEach}" var="discussEach">
+	  		<div class="col-md-3 discussshow">
+	  			<div><c:out value="${discussEach.content}"/></div>
+	  			<div><a class="btn btn-default" href="manage?go=discuss&id=<c:out value="${discussEach.discussId}"/>">删除</a></div>
+	  		</div>
+  		</c:forEach>
+  		
+  	</section>
+  		<!--相册-->
+  	<section class="col-md-8">
+  		<li class="list-group-item active"><h4 class="list-group-item-heading">相册管理区</h4></li>
+  		<c:forEach items="${allPic}" var="picget">
+	  		<div class="col-md-3 imgshow">
+	  			<div><img alt="" src="<c:out value="${picget.src}"/>"></div>
+	  			<div><a class="btn btn-default" href="manage?go=pic&id=<c:out value="${picget.photoId}"/>">删除</a></div>
+	  		</div>
+  		</c:forEach>
+  	</section>
+  	<!--上传图片-->
+  	<section class="col-md-4">
+  		<li class="list-group-item active"><h4 class="list-group-item-heading">上传图片</h4></li>
+  		<%@ include file="upload.jsp" %>
+  	</section>
+  	<!--文章-->
+  	<section class="col-md-8">
+  		<li class="list-group-item active"><h4 class="list-group-item-heading">文章管理区</h4></li>
+  		 <c:forEach items="${articleEach}" var="ate">
+	  		<div class="col-md-12 one">
+	  			<span><a class="btn btn-success" href="detail?id=<c:out value="${ate.articleId}"/>">查看前台文章样式</a></span>
+	  			<span class="btn-success">类别:<c:out value="${ate.type}"/></span>
+	  			<span class="btn-success">发表日期:<c:out value="${ate.time}"/></span>
+	  			<span class="btn-success">浏览数:<c:out value="${ate.viewCounts}"/></span>
+	  			<span class="btn-success">评论数:<c:out value="${ate.discussCounts}"/></span>
+	  			<div class="col-md-12 article">
+	  				<div  class="navabar-default"><c:out value="${ate.content}"/></div>
+	  			</div>
+	  			<div>
+	  				<span><a class="btn btn-default" href="manage?go=article&id=<c:out value="${ate.articleId}"/>">删除</a></span>
+	  				<span><a onclick="changeArticle();" class="btn btn-default">修改</a></span>
+	  			</div>
+	  		</div>
+  		  </c:forEach>
+  		
+  	</section>
+  	<section class="col-md-12">
+  		<li class="list-group-item active"><h4 class="list-group-item-heading">文章发布台</h4></li>
+	  	<div>
+		  <form action="allManage" method="post">
+			  	<script id="container" name="content" type="text/plain">
+      				欢迎来到管理员界面，写下你的新鲜事吧！
+    			</script>	
+			  	<input class="col-md-3" type="text" placeholder="输入文章标题" name="title"/>
+			  	<input class="col-md-3" type="text" placeholder="输入文章类型" name="type"/>
+			  	<input class="col-md-6" type="text" placeholder="输入文章描述" name="description"/>
+			    <input  class="btn btn-success" type="submit" value="submit" name="submit"/>
+	    	</form>
+	    		 <!-- 配置文件 -->
+		    <script type="text/javascript" src="${ctx}/ueEditor/ueditor.config.js"></script>
+		   		 <!-- 编辑器源码文件 -->
+		    <script type="text/javascript" src="${ctx}/ueEditor/ueditor.all.js"></script>
+		   		 <!-- 实例化编辑器 -->
+		    <script type="text/javascript">
+		        var ue = UE.getEditor('container');
+		    </script>
+	  	</div>
+   </section>
+</div>
+  <script type="text/javascript">
+  		  	function changeArticle(){
+  		   		var uu = UE.getEditor('container');
+  		   		var uu.setContent("Hello");
+  		   	}
+  		  </script>
+<script>
+	var meny = Meny.create({
+		menuElement: document.querySelector( '.meny' ),
+		contentsElement: document.querySelector( '.contents' ),
+		position: Meny.getQuery().p || 'left',
+		height: 200,
+		width: 260,
+		threshold: 40,
+		mouse: true,
+		touch: true
+	});
+	if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+		var contents = document.querySelector( '.contents' );
+		contents.style.padding = '0px';
+		contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+	}
+</script>
+<!-- 代码部分end -->
+<script type="text/javascript" src="${ctx}/front/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="${ctx}/front/js/bootstrap.min.js"></script>
+
+</body>
+</html>

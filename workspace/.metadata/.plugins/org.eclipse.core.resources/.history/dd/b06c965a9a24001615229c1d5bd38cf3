@@ -1,0 +1,80 @@
+package com.yfc.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import com.yfc.dao.ShowByPage;
+import com.yfc.valueBean.ArticleBean;
+
+public class loadMore extends HttpServlet {
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		/*转码将UTF-8 转换成 ISO8859-1 解决响应 get请求下的乱码；
+		 * 原因：①传输方和接收方采用的编码不一致。传输方对参数采用的是UTF-8编码而接收方却用GBK进行解析，当然是乱码。
+ 			         ②Tomcat服务器默认采用的ISO8859-1编码得到参数值。虽然①中采用了同样的编码方式，但经过tomcat一处理，
+ 			         也会出现乱码(GET方式)
+		 */
+		String brebt="详细阅读";
+		String readbt=new String(brebt.getBytes("UTF-8"),"ISO8859-1");
+		
+		String require=request.getParameter("pageSize");
+		if(require!=null){
+			ShowByPage SBP=new ShowByPage();
+			int pageAll=SBP.pager();
+			pageAll=pageAll%2==0?pageAll/6:pageAll/6+2;
+			System.out.println("pageAll"+pageAll);
+			response.setHeader("Access-Control-Allow-Origin","*");
+			response.setContentType("text/html;charSet=UTF-8");
+			PrintWriter out=response.getWriter();
+			out.println(pageAll);
+			out.flush();
+			out.close();
+		}
+		String indexPage="<div class=\"article\">" +
+							"<h2 class=\"h2\">you,why you<span></span></h2>" +
+							"<div class=\"article_Info\">" +
+								"<span>文章类型：我的成长之路</span>" +
+								"<span>发布日期：</span>" +
+								"<span>浏览数：9</span>" +
+								"<span>评论数：0</span>" +
+							"</div>" +
+							"<p>yes it is you ,for the world gives you</p>" +
+							"<p><a class=\"btn btn-success\" href=\"/julysummer/servlet/detail?id=4\" role=\"button\">"+readbt+"&raquo;</a></p>" +
+						"</div>";
+
+		//加载更多事件
+		int m=Integer.parseInt(request.getParameter("start"));
+		System.out.println(m);
+		ShowByPage sbp=new ShowByPage();
+		List<ArticleBean> page=sbp.pager(8,m);
+		System.out.println(page.size());
+		List<String>result=new ArrayList<String>();
+		
+		for(ArticleBean i:page){
+			String sig="<img src=\"front/img/load.gif\">"+
+				"<figcaption>"+
+				"<h4>"+i.getTitle()+"</h4>"+
+				"<p>"+i.getDescription()+"</p>"+
+				"<p><a class=\"btn btn-success\" href=\"detail?id="+i.getArticleId()+"\" role=\"button\">"+readbt+"&raquo;</a></p>";
+			System.out.println(sig);
+			result.add(sig);
+		}
+		response.setHeader("Access-Control-Allow-Origin","*");
+		response.setContentType("text/html;charSet=UTF-8");
+		PrintWriter out=response.getWriter();
+		for(String re:result){
+			out.println(re);
+			System.out.println(re);
+		}
+		out.flush();
+		out.close();
+	}
+
+}

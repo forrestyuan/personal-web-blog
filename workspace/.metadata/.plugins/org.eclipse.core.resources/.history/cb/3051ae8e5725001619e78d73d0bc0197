@@ -1,0 +1,39 @@
+package com.yfc.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.yfc.dao.AdminDao;
+import com.yfc.valueBean.AdminBean;
+
+public class manage extends HttpServlet {
+
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doPost(request, response);
+	}
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		
+		//博主信息
+		AdminDao ad=new AdminDao();
+		AdminBean adb=ad.queryAdminInfo();							
+		request.setAttribute("adminInfo",adb);//将博主信息保存到attribute中
+		//接收并修改博主信息
+		request.setCharacterEncoding("UTF-8");
+		System.out.println(
+		request.getParameter("username")+""+
+		request.getParameter("qq")+""+
+		request.getParameter("email")
+		);
+		RequestDispatcher rdp=request.getRequestDispatcher("admin/manageCenter.jsp");
+		rdp.forward(request, response);
+	}
+
+}

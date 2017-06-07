@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/common.css" type="text/css">
+		<link rel="stylesheet" href="css/default.css" type="text/css">
+		<link rel="stylesheet" href="css/mokuai.css" type="text/css">
+		<link rel="stylesheet" href="css/zzsc.css" type="text/css">
+		<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="js/plugins.js"></script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+		<script type="text/javascript" src="js/mokuai.js"></script>
+	</head>
+	<body style="background-color: #262626;">
+		<div class="wrap_all">
+			<!--header-->
+			<header>
+			    <div id="header">
+			    	<span><img class="logo" src="images/logo.png"></span>
+			    	<span class="myword"><p id="zuoYouMing">从不羡慕别人的优秀，因为相信自己也可以优秀。闲下来时看看书，书本里的故事，总有你学到的人生。</p></span>
+			    	<span class="logo_pic"><img src="images/logo_pic.jpg"></span>
+			    	
+			    </div>
+			</header>
+			<!--header end-->
+			<!--nav-->
+			<div id="nav">
+				<ul class="menu">
+                   <li><a href="index.html">首页</a></li>
+                   <li><a href="muban.html">网站模板</a></li>
+                   <li><a href="video.html">视频教程</a></li>
+                   <li><a href="learn.html">学无止境</a></li>  
+                   <li><a href="web.html">WEB实例</a></li>
+                   <li><a href="diary.html">个人日记</a></li>
+                   <li id="active"><a class="active" href="photo.html">光影点滴</a></li>
+                   <li id="nav_end"><a href="leaveword.html">留言板</a></li>   
+               </ul>
+			</div>	
+			<!--nav end-->
+			<!--main-->
+			<div class="wrap_main" style="width:100%;">
+				<!-- 代码 开始 -->
+		  <div id="gallery-container">
+		    
+		    <ul class="items--small">
+		      <li class="item"><a href="#"><img src="photo/small-1.png" alt="" /></a></li>
+		      <li class="item"><a href="#"><img src="photo/small-2.png" alt="" /></a></li>
+		      <li class="item"><a href="#"><img src="photo/small-3.png" alt="" /></a></li>
+		      <li class="item"><a href="#"><img src="photo/small-4.png" alt="" /></a></li>
+		      <li class="item"><a href="#"><img src="photo/small-5.png" alt="" /></a></li>
+		      <li class="item"><a href="#"><img src="photo/small-6.png" alt="" /></a></li>
+		      <li class="item"><a href="#"><img src="photo/small-7.png" alt="" /></a></li>
+		      <li class="item"><a href="#"><img src="photo/small-8.png" alt="" /></a></li>
+		      <li class="item"><a href="#"><img src="photo/small-9.png" alt="" /></a></li>
+		      <li class="item"><a href="#"><img src="photo/small-10.png" alt="" /></a></li>
+		      <li class="item"><a href="#"><img src="photo/small-11.png" alt="" /></a></li>
+		      <li class="item"><a href="#"><img src="photo/small-12.png" alt="" /></a></li>
+		    </ul>
+		    <ul class="items--big">
+		      <li class="item--big">
+		          <figure>
+		            <img src="photo/big-1.jpg" alt="" />
+		            <figcaption class="img-caption">
+		              Caption
+		            </figcaption>
+		          </figure> 
+		      </li>
+		      <li class="item--big">
+		          <figure>
+		            <img src="photo/big-2.jpg" alt="" />
+		            <figcaption class="img-caption">
+		              Caption
+		            </figcaption>
+		          </figure>
+		      </li>
+		      <li class="item--big">
+		        
+		          <figure>
+		            <img src="photo/big-3.jpg" alt="" />
+		            <figcaption class="img-caption">
+		              Caption
+		            </figcaption>
+		          </figure>
+		          
+		      </li>
+		      <li class="item--big">
+		        
+		          <figure>
+		            <img src="photo/big-4.jpg" alt="" />
+		            <figcaption class="img-caption">
+		              Caption
+		            </figcaption>
+		          </figure>
+		         
+		      </li>
+		      <li class="item--big">
+		       
+		          <figure>
+		            <img src="photo/big-5.jpg" alt="" />
+		            <figcaption class="img-caption">
+		              Caption
+		            </figcaption>
+		          </figure>
+		          
+		      </li>
+		      <li class="item--big">
+		       
+		          <figure>
+		            <img src="photo/big-6.jpg" alt="" />
+		            <figcaption class="img-caption">
+		              Caption
+		            </figcaption>
+		          </figure>
+		          
+		      </li>
+		      <li class="item--big">
+		       
+		          <figure>
+		            <img src="photo/big-7.jpg" alt="" />
+		            <figcaption class="img-caption">
+		              Caption
+		            </figcaption>
+		          </figure>
+		         
+		      </li>
+		      <li class="item--big">
+		        
+		          <figure>
+		            <img src="photo/big-8.jpg" alt="" />
+		            <figcaption class="img-caption">
+		              Caption
+		            </figcaption>
+		          </figure>
+		       
+		      </li>
+		      <li class="item--big">
+		       
+		          <figure>
+		            <img src="photo/big-9.jpg" alt="" />
+		            <figcaption class="img-caption">
+		              Caption
+		            </figcaption>
+		          </figure>
+		        
+		      </li>
+		      <li class="item--big">
+		 
+		          <figure>
+		            <img src="photo/big-10.jpg" alt="" />
+		            <figcaption class="img-caption">
+		              Caption
+		            </figcaption>
+		          </figure>
+		      
+		      </li>
+		      <li class="item--big">
+		   
+		          <figure>
+		            <img src="photo/big-11.jpg" alt="" />
+		            <figcaption class="img-caption">
+		              Caption
+		            </figcaption>
+		          </figure>
+		
+		      </li>
+		      <li class="item--big">
+		          <figure>
+		            <img src="photo/big-12.jpg" alt="" />
+		            <figcaption class="img-caption">
+		              Caption
+		            </figcaption>
+		          </figure>
+		      </li>
+		    </ul>
+		    <div class="controls ">
+		      <span class="control icon-arrow-left" data-direction="previous"></span> 
+		      <span class="control icon-arrow-right" data-direction="next"></span> 
+		      <span class="grid icon-grid"></span>
+		      <span class="fs-toggle icon-fullscreen"></span>
+		    </div>
+		    
+		  </div>
+		 </div>
+		 
+
+	<script>
+	    $(document).ready(function(){
+	     $('#gallery-container').sGallery({
+	        fullScreenEnabled: true
+	      });
+	    }); 
+	</script>
+<!-- 代码 结束 -->
+			</div>
+			<!--main end-->
+			<!--footer-->
+		<footer>
+			<div class="ft-info">
+				<ul class="ft-first">
+					<li><a href="#" class="title">博客首页</a></li>
+					<li><a href="#">建博工具</a></li>
+					<li><a href="#">友情链接</a></li>
+				</ul>
+				<ul class="ft-second">
+					<li><a href="#" class="title">联系与合作</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">用户反馈</a></li>
+				</ul>	
+				<p style="font-size:18px;color: #336699; display: inline-block; margin: 0 0 0 20px;"><span class="time" id="countTime"></span><br>Design by:小袁湘ICP备********号-2</p>
+			</div>
+			
+			<div class="ft-info2">
+				<ul>
+					<li><a href="#" class="title">关注我们</a></li>
+					<li><a href="#">微博：@xxxxx</a></li>
+					<li>QQ:959670036</li>
+					
+				</ul>
+			</div>
+		</footer>	
+			<!--footer end-->
+		<!--totop-->
+	<div class="scroll" id="scroll" style="display:none;">
+		回到<br>顶部
+	</div>
+	<div class="qq">
+		<a href="leaveword.html">给我<br>留言</a>
+	</div>
+	</div>
+	</body>
+</html>

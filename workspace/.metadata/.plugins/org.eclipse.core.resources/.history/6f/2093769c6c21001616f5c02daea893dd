@@ -1,0 +1,11 @@
+package com.yfc.valueBean;
+
+public class leaveBean {
+	private int leaveId;
+	private String name;
+	private String email;
+	private String topic;
+	private String content;
+	private String state;
+	
+}

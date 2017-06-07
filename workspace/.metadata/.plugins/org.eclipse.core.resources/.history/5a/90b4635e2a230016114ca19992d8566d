@@ -1,0 +1,48 @@
+/*除主页外换背景*/
+#changebg{position: fixed;bottom:100px;right: 2px;}
+/*留言按钮*/
+#leavemeword{position: fixed;bottom:50px;right:2px;}
+/*-----------背景----------*/
+html{overflow-x: hidden;}
+#bg{width:100%;height: 100%;position:fixed;z-index: -100;}
+#bg img{width: 100%;height: 100%;}
+/*---------导航条---------*/
+#nav1{border: none;padding-top:4px;background-color:#555555;border-radius: 0;z-index: 1000;}
+#nav1 * a{text-align:center;color:#00BFFF;font-size:1.3em;margin-left: 10px; border-radius:5px;box-shadow:0 0 1px #CCCCCC;height: 38px;padding-top:10px;}
+#nav1 .active a{color:white;background-color: #00BFFF;border-bottom:solid 2px #FFFF00;}
+#nav1 .nav a:hover{color:#00BFFF;background-color:rgba(0,0,0,0.6);border-bottom:solid 2px springgreen;}
+#nav1 img{padding:1px 0 1px 1px;margin:0 40px 0 10px;width:110px;height: 40px;}
+#nav1 .dropdown-menu{background-color: #222222;}
+#nav1 .dropdown-menu a{margin:2px;}
+#log,#hidelog,#hidesearch{display:none;}
+#log,#search{margin: 0;}
+#search{display: none;}
+/*脚部样式*/
+footer{background-color:rgba(0,0,0,0.5);color:deepskyblue;text-align: center;margin-top: 150px;width: 100%;padding-top:50px;height:150px;}
+footer span{display: inline-block;margin-right: 20px;font-size: larger;}
+footer span:last-child{display: block;font-size: x-large;}
+/*------隐藏滚动条------*/
+::-webkit-scrollbar{width:0;}
+/*-------回到顶部-------*/
+.totop{position: fixed;right: 10px;bottom:140px;z-index: 1000;display: none;} 
+.totop img{width: 50px;height: 70px;}
+
+/*页眉tag*/
+.eyerow{display: inline-block;width: 100%;text-align: left;border-bottom:#00BFFF solid 2px;color: #00BFFF;margin-bottom:10px;}
+.eyerow a{float: right;color:#0000FF;}
+.eyerow img{height:30px;width: 120px;}
+
+@media only screen and (min-width:1300px){
+	.main{width:1300px;margin: 0 auto;}
+	
+}
+/*加载按钮*/
+.load_con{text-align: center;}
+.buttonLoad{padding-top:5px;height:40px;display:inline-block;width:10em;text-align:center;background-color:#000000;border-radius:5px;cursor: pointer;color: #00BFFF;}
+.buttonLoad:hover{background-color: #00BFFF;color:yellow}
+
+/*云标签*/
+.cloud a{color:green;text-decoration:none;}
+.cloud a:hover{color:#FFFFFF;}
+.cloud span{background-color:pink;color:green;display:inline-block;margin:5px 5px 2px 5px;transition:all 2s ease-in-out;width:5em;text-align: center;font-size: 16px;}
+.cloud span:hover{background-color:red;transition:all 2s ease-in-out;transform:rotate(360deg);}

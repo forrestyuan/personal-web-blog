@@ -1,0 +1,39 @@
+package com.yfc.dao;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.yfc.toolBean.CommonADO;
+import com.yfc.valueBean.ArticleBean;
+
+public class ShowByPage {
+	private CommonADO commonADO;
+	private ResultSet rs;
+	private int pageSize=0;
+	public ShowByPage(){
+		commonADO =CommonADO.getCommonADO();
+	}
+	public List<ArticleBean> pager(){
+		List<ArticleBean> result=new ArrayList<ArticleBean>();
+		String sql="select * from article";
+		rs=commonADO.executeSelect(sql);
+		try{
+			while(rs.next()){
+				ArticleBean ab=new ArticleBean();
+				ab.setArticleId(rs.getInt("articleId"));
+				result.add(ab);
+			}
+			pageSize=result.size();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	/*
+	 * 关闭数据库
+	 */
+	public void closeDB(){
+		commonADO.closeDB();
+	}
+}

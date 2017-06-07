@@ -1,0 +1,4 @@
+function activeInput(){
+	var tag=document.getElementById("adInfo");
+	tag.removeAttribute(disabled);
+}

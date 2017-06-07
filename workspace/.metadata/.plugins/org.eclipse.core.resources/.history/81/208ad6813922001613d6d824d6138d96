@@ -1,0 +1,149 @@
+package yfc118.dao;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import yfc118.toolsbean.CommonADO;
+import yfc118.valuebean.ArticleBean;
+import yfc118.valuebean.TypeBean;
+
+
+public class Article {
+	private CommonADO commonADO= null;
+	private ArticleBean articleBean = null;
+
+	public Article() {
+		commonADO=CommonADO.getCommonADO();
+	}
+	/*------------------------------测试Main-----------------------------*/
+/*	public static void main(String args[]) {
+		// TODO Auto-generated method stub
+		Article test=new Article();
+//		List result=test.queryArticle("IT");
+		ArticleBean sig=test.queryArticleSingle("程序员的路");
+		System.out.println(sig.getArticle());
+	}*/
+/*------------------------------测试Main-----------------------------*/
+	/**
+	 * @功能 实现对文章进行增、删、改的操作
+	 * @参数 oper为一个String类型变量，用来表示要进行的操作；single为ArticleBean类对象，用来存储某个文章的信息
+	 * @返回值 boolean型值
+	 */
+	public boolean operationArticle(String oper, ArticleBean single) {		
+		/* 生成SQL语句 */
+		String sql = null;
+		if (oper.equals("add"))					//发表新文章
+			sql = "insert into article values (" + single.getId() + ",'"+ single.getTitle()+ "','" + single.getArticle() + "','"+ single.getTag()+ "','"+single.getPubTime()+"'," + single.getCount()+","+single.getReview()+",'" +single.getInfo()+ "')";
+		if (oper.equals("modify"))				//修改文章
+			sql = "update article set articleId=" + single.getId()+"',article='"+ single.getArticle()+"',tag='"+single.getTag()+ "',pubTime='"+single.getPubTime()+"',count='"+single.getCount()+"',review='"+single.getReview()+"',info='"+single.getInfo()+"'where title=" + single.getTitle();
+		if (oper.equals("delete"))				//删除文章
+			sql = "delete from article where title=" + single.getTitle();
+		if (oper.equals("readTimes"))			//累加阅读次数
+			sql = "update article set count=count+1 where id="+ single.getId();
+		
+		/* 执行SQL语句 */	
+		return commonADO.executeUpdate(sql)==0;
+	}
+
+	/** 
+	 * @功能 查询指定类别的文章
+	 * @参数 type表示文章类别值
+	 * @返回值 List集合
+	 */
+	public List queryArticle(String type) {
+		List articlelist = new ArrayList();
+		String sql = "";					//按类别查询
+		if(type==null||(type.trim()).equals("")||(type.toLowerCase()).equals("all"))
+			sql = "select top 15 *  from article"; //读取前15条
+		else
+			sql = "select * from article where tag='"+type+"'order by articleId DESC";
+		ResultSet rs =commonADO.executeSelect(sql);
+		if(rs!=null){
+			try {
+				while (rs.next()) {
+					/* 获取文章信息 */
+					articleBean = new ArticleBean();
+					articleBean.setId(rs.getInt("articleId"));
+					articleBean.setCount(rs.getInt("count"));
+					articleBean.setReview(rs.getInt("review"));
+					articleBean.setTitle(rs.getString("title"));
+					articleBean.setArticle(rs.getString("article"));
+					articleBean.setPubTime(rs.getString("pubTime"));
+					articleBean.setTag(rs.getString("tag"));
+					articleBean.setInfo(rs.getString("info"));					
+					/* 查询tb_review数据表统计当前文章的评论数 */
+				/*	sql="select review from  where review_articleId="+articleBean.getId();
+					ResultSet rsr=commonADO.executeSelect(sql);
+					if(rsr!=null){
+						rsr.next();
+						articleBean.setReview(rsr.getInt("review"));
+						rsr.close();						
+					}	*/				
+					articlelist.add(articleBean);
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} finally{
+				commonADO.closeDB();
+			}			
+		}
+		return articlelist;
+	}
+
+	/**
+	 * @功能 查询指定文章的详细内容
+	 * @参数 title为文章title值
+	 * @返回值 ArticleBean类对象，封装了文章信息
+	 */
+	public ArticleBean queryArticleSingle(String title) {
+		String sql = "select * from article where title='" +title+ "'";
+		ResultSet rs = commonADO.executeSelect(sql);
+		try {
+			if(rs.next()) {
+				articleBean = new ArticleBean();
+				articleBean.setId(rs.getInt("articleId"));
+				articleBean.setCount(rs.getInt("count"));
+				articleBean.setReview(rs.getInt("review"));
+				articleBean.setTitle(rs.getString("title"));
+				articleBean.setArticle(rs.getString("article"));
+				articleBean.setPubTime(rs.getString("pubTime"));
+				articleBean.setTag(rs.getString("tag"));
+				articleBean.setInfo(rs.getString("info"));	
+				
+				/* 查询tb_review数据表统计当前文章的评论数 */
+			/*	sql="select count(id) from tb_review where review_articleId="+articleBean.getId();
+				ResultSet rsr=commonADO.executeSelect(sql);*/
+				commonADO.closeDB();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return articleBean;
+	}
+
+	
+	/**
+	 * @功能 查询文章所有类别
+	 * 
+	 * @返回值 typeBean类对象，封装了文章信息
+	 */
+	public List queryTypeList(){
+		List typeList=new ArrayList();
+		String sql="select * from type group by typeName";
+		ResultSet rs=commonADO.executeSelect(sql);
+		try{
+			while(rs.next()){
+				TypeBean typeBean=new TypeBean();
+				typeBean.setTypeId(rs.getInt("typeId"));
+				typeBean.setTypeName(rs.getString("typeName"));
+				typeList.add(typeBean);
+			}
+		}catch(Exception e){
+				e.printStackTrace();
+			}finally{
+				commonADO.closeDB();
+			}
+		return typeList;
+	}
+}

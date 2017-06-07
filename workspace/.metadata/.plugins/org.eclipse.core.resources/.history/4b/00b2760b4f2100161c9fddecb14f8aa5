@@ -1,0 +1,30 @@
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+
+
+<style>
+* {font-family: "宋体";font-size: 14px}
+</style>
+<center>
+	<a href="">退出登录</a><br><br>	
+	所有留言内容<br><br>	
+		
+	<table width="600" border="1" bordercolor="000000"
+		style="table-layout: fixed; word-break: break-all">
+		<tr><td width="100" bordercolor="ffffff">留言编号:
+			</td><td width="500" bordercolor="ffffff"></td>
+		</tr>
+		<tr><td bordercolor="ffffff">作者:</td>
+			<td bordercolor="ffffff"></td>
+		</tr>
+		<tr><td bordercolor="ffffff">主题:
+			</td><td bordercolor="ffffff"></td>
+		</tr>
+		<tr><td width="100" bordercolor="ffffff">操作选项：</td>
+			<td width="500" bordercolor="ffffff">
+			<a href="">编辑</a>
+			<a href="">删除</a></td>
+		</tr>		
+	</table>
+	<br>
+		
+</center>

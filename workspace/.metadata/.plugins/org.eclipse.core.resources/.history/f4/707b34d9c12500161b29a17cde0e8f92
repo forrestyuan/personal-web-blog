@@ -1,0 +1,9 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<form action="helpUpload" method="post" ENCTYPE="multipart/form-data">
+  			<input type="file" name="fileName" size="40" />
+  			<br><input type="submit" name="g" value="提交"/>
+  		</form>

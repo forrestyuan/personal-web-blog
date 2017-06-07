@@ -1,0 +1,84 @@
+package com.yfc.dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.yfc.toolBean.CommonADO;
+import com.yfc.valueBean.AdminBean;
+
+public class AdminDao {
+	private CommonADO commonADO;
+	public AdminDao(){
+		commonADO=CommonADO.getCommonADO();
+	}
+	/**
+	 * @功能 查询博主的信息
+	 * @返回 封装了博主信息的AdminBean实例对象
+	 */
+	public AdminBean queryAdminInfo(){
+		AdminBean adb=new AdminBean();
+		String sql="select * from admin";
+		ResultSet rs=commonADO.executeSelect(sql);
+		try {
+			while(rs.next()){
+				//adb.setAdminId(rs.getInt("adminId"));
+				adb.setUserName(rs.getString("userName"));
+				//adb.setPassword(rs.getString("password"));
+				adb.setQq(rs.getString("qq"));
+				adb.setEmail(rs.getString("email"));
+				adb.setSex(rs.getString("sex"));
+				adb.setPassword(rs.getString("password"));
+				adb.setSrc(rs.getString("src"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return adb;
+	}
+	/**
+	 * @功能 更换管理员
+	 * @功能 single为AdminBean类型参数
+	 * @返回值 boolean类型变量 
+	 */
+	public boolean changeAdministrator(AdminBean single){
+		String sql1="delete from admin";
+		int tag=commonADO.executeUpdate(sql1);
+		if(tag>=0){
+			String sql2 = "insert into admin values('"+single.getUserName()+"','"+single.getPassword()+"','"+single.getQq()+"','"+single.getEmail()+"','"+single.getSex()+"','"+single.getSrc()+"')";
+			boolean tag2=commonADO.executeUpdate(sql2)>=1;
+			return tag2;
+		}else{
+			return false;
+		}
+	}
+	/**
+	 * @功能 查询是否存在某个管理员
+	 * @功能 用户名 userName为String类型变量,password 为String类型变量
+	 * @返回值 boolean类型变量 
+	 */
+	public boolean isExist(String userName,String password){
+		String sql="select * from admin where userName='"+userName+"'";
+		ResultSet rs=null;
+		boolean isHere=false;
+		rs=commonADO.executeSelect(sql);
+		try {
+			if(rs.next()){
+				String sql2="select * from admin where password='"+password+"'";
+				rs=commonADO.executeSelect(sql2);
+				if(rs.next()){
+					isHere=true;
+				}else{
+					isHere=false;
+				}
+			}else{
+				isHere=false;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return isHere;
+	}
+	
+}

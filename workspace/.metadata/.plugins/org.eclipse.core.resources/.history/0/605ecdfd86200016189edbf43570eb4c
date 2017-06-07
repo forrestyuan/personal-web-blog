@@ -1,0 +1,15 @@
+package com.cjg.servlet;
+
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import javax.servlet.ServletException;
+import javax.servlet.http.*;
+import com.cjg.tool.*;
+
+public class AddMessageServlet extends HttpServlet {
+	private static final long serialVersionUID = -8349454122547148005L;
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+}

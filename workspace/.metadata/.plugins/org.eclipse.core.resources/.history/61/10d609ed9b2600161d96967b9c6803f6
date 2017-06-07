@@ -1,0 +1,148 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page import="com.yfc.valueBean.*" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%
+String path = request.getContextPath();
+pageContext.setAttribute("ctx",path);
+%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>julysummer</title>
+		<link rel="stylesheet" href="${ctx}/front/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="${ctx}/front/css/all.css" />
+		<link rel="stylesheet" href="${ctx}/front/css/leaveword.css" />
+	</head>
+	<body>
+	<header>
+	    <!--background-->
+		<div id="bg"><img id="bimg" src="${ctx}/front/img/bg.jpg" alt="" /></div>
+	    <!--导航栏-->
+		<nav id="nav1" class="navbar navbar-inverse ">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand">ForrestYuan</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li><a href="${ctx}/">首页<span class="sr-only">(current)</span></a></li>
+		        <li><a href="learn">学无止境</a></li>
+		        <li><a href="light">光影点滴</a></li>
+		        <li class="active"><a href="javascript:void(0)">留言板</a></li>
+		         <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多<span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="${ctx}/About.jsp">关于我</a></li>
+		             <li id="addFavorite" ><a href="javascript:void(0)">点我收藏</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		      <form id="log" class="navbar-form navbar-left" action="" method="post">
+	            <div class="form-group">
+	              <input type="text" placeholder="Email" class="form-control">
+	            </div>
+	            <div class="form-group">
+	              <input type="password" placeholder="Password" class="form-control">
+	            </div>
+	            <button type="submit" class="btn btn-success">Login</button>
+	          </form>
+	          <form id="search"class="navbar-form navbar-left" action="#" method="post">
+					<div class="form-group">
+						<input class="form-control" type="search" name="search" autocomplete="on" value="" placeholder="寻，你所爱！！" />
+					</div>
+					<div class="form-group">
+						<button class="btn btn-success" type="submit" name="submit">千寻一下</button>
+					</div>	
+	          </form>
+	          	<li><a id="showsearch" onclick="showsearch()" href="javascript:void(0)">千寻一下</a></li>
+	          	<li><a id="hidesearch" onclick="hidesearch()" href="javascript:void(0)">搜索完毕</a></li>
+		        <% 
+					AdminBean adBean=null;
+					adBean=(AdminBean)request.getSession(true).getAttribute("login");
+					if(adBean!=null){	        
+		         %>
+		         	<li><a href="manage?go=0&id=0">管理后台</a></li>
+		         	<li><a href="logout">退出</a></li>
+		         <%
+		         }else{
+		         %>
+		        	 <li><a href="${ctx}/login.jsp">登录</a></li>
+		         <%
+		         }
+		          %>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+	</header>
+	
+	<!--主体内容-->
+	<span onclick="changebimg()" id="changebg" class="btn btn-warning">换换背景</span>
+      <div align="center" class="container-fluid col-md-12">
+    	<ul class="timeline">
+    			<c:forEach items="lbList" var="lbl">
+                <li class="event">
+                    <label></label>
+                    <div class="thumb" style="background-image: url(front/img/7.jpg); background-size: contain;"></div>
+                    <div class="inner">
+                        <div class="btn-default col-md-12 h5">
+	                        <span>留言侠客:<c:out value="${lbl.name}"></c:out></span>
+	                        <spa>留言主题:<c:out value="${lbl.topic}"></c:out></span>
+	                        <span>留言时间:<c:out value="${lbl.time}"></c:out></span>
+                        </div>
+                        <div class="btn-default">留言内容:</div>
+                        <div>
+                        	<c:out value="${lbl.content}"></c:out>
+                        </div>
+                    </div>
+                </li>
+                </c:forEach>
+                <div class="col-md-7">
+    			<h3 class="eyerow">写下你的真知灼见，诉出你的肺腑心言:</h3>
+		   		<script type="text/javascript">
+		   			var cont=CKEDITOR.replace('ArticleDiscuss');
+		   			function clearIt(){
+						CKEDITOR.instances['TextArea2'].setData("");
+		    		}
+		   		</script>
+		   		<div id="review" class="reviewOther">
+	                    <form action="OtherReviewOther" method="post">
+	                    	昵称:<input type="text" name="name" placeholder="输入昵称,不能为空"/><br>
+	                    	邮箱号:<input type="text" name="email" placeholder="输入你的邮箱号,不能为空"/><br>
+	                    	主题:<input type="text" name="topic" placeholder="输入留言主题,不能为空"/><br>
+	                    	内容:<textarea name="content" rows="5"></textarea><br>
+	                    	<input type="button" value="取消回复"/>
+	                    	<input type="submit" value="回复"/>
+	                    </form>
+                 </div>
+			</div>   
+                 
+           </ul>
+    </div>
+<!--******************************************主题内容结束********************************************-->
+    <!--脚部-->
+    <footer>
+   		<span>友情链接:
+   			<c:forEach items="${allLink}" var="lik">
+   				<span><a target="_blank" href="http://<c:out value="${lik.linkLoveURL}"/>"><c:out value="${lik.linkName}"/></span>
+   			</c:forEach>
+   		</span>
+        <span><p>&copy; Company 2014</p></span>
+    </footer>
+    <div id="gotop" onclick="flytotop();" class="totop"><a href="#"><img src="${ctx}/front/img/fighter2.png"></a></div>
+    <script src="${ctx}/front/js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="${ctx}/front/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>   
+    <script src="${ctx}/front/js/my.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

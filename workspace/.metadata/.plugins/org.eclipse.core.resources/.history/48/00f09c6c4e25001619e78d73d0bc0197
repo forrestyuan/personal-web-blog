@@ -1,0 +1,6 @@
+#nav1{margin-bottom:5px;}
+.head{background:white;width:190px; height:190px;}
+.head img{width:190px;heigh:190px;}
+.InfoSet{color:#222;width:4em;}
+#backToFront{background: rgb(0, 142, 173);border-radius: 4px; font-weight: bold;}
+#adInfo1,#adInfo2,#adInfo3{width:190px;height:30px;color:#222;font-size:18px;}

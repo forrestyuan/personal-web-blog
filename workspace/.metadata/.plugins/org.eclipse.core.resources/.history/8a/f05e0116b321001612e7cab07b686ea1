@@ -1,0 +1,36 @@
+package com.yfc.dao;
+
+import com.yfc.toolBean.CommonADO;
+
+public class LeaveDao {
+	private CommonADO commonADO;
+	public LeaveDao(){
+		commonADO=CommonADO.getCommonADO();
+	}
+	
+	/**
+	 * @功能 添加留言、删除留言
+	 * @参数	oper为String类型变量  single为ArticleBean类型变量
+	 * @返回值 boolean类型
+	 */
+	public boolean operationArticle(String oper,LeaveBean single) {		
+		/* 生成SQL语句 */
+		String sql = null;
+		oper=oper.toLowerCase().trim();
+		if(oper.equals("add")){//添加留言
+			sql = "insert into leave values("+single.getArticleId()+",'"+single.getName()+"','"+single.getEmail()+"','"+single.getContent()+"','"+single.getTime()+"','"+single.getState()+"')";
+		}	
+		if(oper.equals("yes")){//修改留言审核状态
+			sql = "update leave set state='"+oper+"' where discussId="+single.getDiscussId();
+		}
+		if(oper.equals("no")){//修改留言审核状态
+			sql = "update leave set state='"+oper+"' where discussId="+single.getDiscussId();
+		}
+		if(oper.equals("delete")){//删除留言
+			sql = "delete from leave where discussId="+single.getLeaveId();
+		}
+		/* 执行SQL语句 */	
+		return commonADO.executeUpdate(sql)==1;
+	}
+	
+}

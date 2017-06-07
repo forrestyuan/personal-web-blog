@@ -1,0 +1,18 @@
+function check(){
+		var name=document.getElementById('name').innerHTML;
+		var email=document.getElementById('email').innerHTML;
+		if(isNull(name)){
+			alert("请输入用户名！！！");
+			//return false;
+		  	}else if(isNull(email)){
+				alert("请输入邮箱号");
+				return false;
+			}
+		}
+	
+function isNull( str ){
+	if ( str == "" )return true;
+		var regu = "^[ ]+$";
+		var re = new RegExp(regu);
+		return re.test(str);
+	}

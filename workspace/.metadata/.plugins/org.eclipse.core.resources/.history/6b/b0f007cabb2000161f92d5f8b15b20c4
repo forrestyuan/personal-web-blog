@@ -1,0 +1,46 @@
+package com.cjg.servlet;
+
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.cjg.tool.SQLServerTool;
+import com.cjg.tool.StringTool;
+
+public class AddMessageServlet extends HttpServlet {
+	private static final long serialVersionUID = -8349454122547148005L;
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String sql = "insert into guestbook (name,email,phone,title,content,time) values(?,?,?,?,?,?)";
+		int result = 0;
+		String message = "";
+		String name = request.getParameter("name");
+		String title = request.getParameter("title");
+
+		if (StringTool.validateNull(name)) {
+			message = "对不起，姓名不能为空，请您重新输入！<br>";
+		} else if (StringTool.validateNull(title)) {
+			message = "对不起，主题不能为空，请您重新输入！<br>";
+		} else {
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			String param[] = { StringTool.filterHtml(name), StringTool.filterHtml(request.getParameter("email")),
+					StringTool.filterHtml(request.getParameter("phone")), StringTool.filterHtml(title),
+					request.getParameter("content"), sdf.format(new java.util.Date()) };
+			SQLServerTool db = new SQLServerTool("java:/comp/env/jdbc/book");
+			db.init();
+			result = db.update(sql, param);
+			if (result == 0) {
+				message = "对不起，添加留言不成功，请您重新输入！";
+			} else {
+				message = "祝贺您，成功添加留言。";
+			}
+		}
+		request.setAttribute("message", message);
+		request.getRequestDispatcher("/addResult.jsp").forward(request, response);
+
+	}
+}

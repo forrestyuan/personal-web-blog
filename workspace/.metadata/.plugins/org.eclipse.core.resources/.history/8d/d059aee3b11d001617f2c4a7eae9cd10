@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Forrest个人博客模板详细内容</title>
+		<meta name="keywords" content="Forrest，Forrest个人博客" />
+		<meta name="description" content="Forrest一个不断学习和研究，web前端和SEO技术的90后草根站长" />
+		<link rel="stylesheet" type="text/css" href="css/mubanonly.css"/>
+		<script src="js/mokuai.js" type="text/javascript"></script>
+		<script src="js/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/pinglunandleaveword.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="sencond_nav">
+	       <span class="menu2">
+	       		<i><img src="images/logo.png"/></i>
+	       		<span>Now 你在这：</span>
+	       		<i><a class="active" href="index.html">首页</a></i>.
+	       		<span>->->-></span>
+                <i><a class="active" href="muban.html">网站模板</a></i>
+                <span>->->-></span>
+                <i id="active"><a class="active" href="template.html">模板详细内容</a></i>
+               </span>
+	</div>
+		<div id="1" class="muban_div">
+			<dl><dt><h1>模板---千寻网</h1></dt><dd>一个帮你收集、发现网络上你喜欢的事物的网站。</dd></dl>
+			<div class="img_muban"><a href="404.html" target="_blank"><img src="images/qianxun.png"></a></div>
+			<div>
+				<dl>
+					<dt><h3>名称由来：</h3></dt>
+					<dd>
+						<p>
+							画板是某种主题的集合用户可以把各种各样的采集放入不同画板，
+							并以你的方式给画板命名。比如：“灵感，我爱你”、“我要把家装成这样”、
+							“吸引我的去处”。<br>“画板”可以更直观地表现每个用户的特质、品味、
+							生活态度……等等。其他用户不但可以通过“画板”更充分的了解你，
+							并与你互动，而且还能将你的“素材”再“采”到自己的画板上，赋予新的定义。
+							在“千寻网”，兴趣与品味构成了人与人之间的联系。
+						</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><h3>网站作用：</h3></dt>
+					<dd>
+						<p>
+							“千寻网”帮你收集、发现网络上你喜欢的事物。用户可以将网上看见的一切信息都
+							保存下来，简单上手，玩味无限。通过专属于“千寻网”的浏览器插件——“采集到花瓣”
+							快速完成信息的收集。不论是在家里，办公室，只要一台拥有网络的终端，只要拥有
+							“千寻网”的账号，就能轻松收集你喜欢的信息。这些信息不但附带原始的网页链接，
+							还会以图片/视频的形式美轮美奂地呈现在“画板”里。用户在“千寻网”会拥有多个自定义
+							“画板”，用来收藏并分类展示“采集”成果。这个过程比我们在电脑里新建一个文件夹还
+							要简单实用，且看上去很美。千寻网可以比做一个工具，一个帮助你收藏互联网上喜欢
+							东西的工具。采集是第一步，是一个聚合的过程，花瓣网本身在后期过程当中，能够通
+							过它的算法帮你推荐，比如说那些你可能感兴趣的东西，帮助你来节省花费自己想要信
+							息的时间。
+						</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><h3>模式：</h3></dt>
+					<dd>
+						<p>
+							千寻网是一家“类Pinterest”网站，是一家基于兴趣的社交分享网站，网站为用户提供了
+							一个简单地采集工具，帮助用户将自己喜欢图片重新组织和收藏。<br><br>
+							“我们每个人都有兴趣爱好，而且我们的兴趣爱好在这个互联网几乎都得到了满足，
+							互联网上已经有够多的信息了， 因此千寻网提供的是，重新链接/收藏/整理/分享你所感兴趣
+							的事物。”
+						</p>	
+					</dd>
+				</dl>
+				<dl>
+					<dt><h3>价值：</h3></dt>
+					<dd>
+						<p>
+							给被采访的用户带来极大荣誉感，可能让这部分资深用户更好的留存并活跃;<br><br>
+							给其他用户带来了一定示范效果。
+						</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><h3>开发时长：</h3></dt>
+					<dd>
+						前端开发时长：1天-2天；
+						后端：目前js模拟.......；
+					</dd>
+				</dl>
+			</div>
+		</div>
+		
+		<div id="2" class="muban_div">
+			<dl><dt><h1>模板---webyfc</h1></dt><dd>一个简单的个人博客网站。</dd></dl>
+			<div class="img_muban"><a href="404.html" target="_blank"><img src="images/webyfc.png"></a></div>
+			<div>
+				<dl>
+					<dt>名称由来：</dt>
+					<dd>
+						<p>
+							web即指网页，yfc则指的是博主的姓名简称，这一类博客是属于轻量级的博客。
+						</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>博客定义：</dt>
+					<dd>
+						<p>
+							简言之，Blog就是以网络作为载体，简易迅速便捷地发布自己的心得，及时有效轻松地与他人进行交流，
+							再集丰富多彩的个性化展示于一体的综合性平台。不同的博客可能使用不同的编码，所以相互之间也不一定兼容。
+							而且，很多博客都提供丰富多彩的模板等功能，这使得不同的博客各具特色。Blog是继Email、BBS、ICQ之后出现的
+							第四种网络交流方式，至今已十分受大家的欢迎，是网络时代的个人“读者文摘”，是以超级链接为武器的网络日记，
+							是代表着新的生活方式和新的工作方式，更代表着新的学习方式。具体说来，博客（Blogger）这个概念解释为使用特定
+							的软件，在网络上出版，发表和张贴个人文章的人。
+						</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>博客的历史由来:</dt>
+					<dd>
+						<p>
+							在网络上发表Blog的构想始于1998年，但到了2000年才开始真正流行;<br>
+							2000年博客开始进入中国，并迅速发展，但都业绩平平；<br>
+							2004年木子美事件，才让中国民众了解到了博客，并运用博客；<br>
+							2005年，国内各门户网站，如新浪、搜狐，原不看好博客业务，也加入博客阵营，开始进入博客春秋战国时代。<br>
+							起初，Bloggers将其每天浏览网站的心得和意见记录下来，并予以公开，来给其他人参考和遵循。但随着Blogging快速扩张，
+							它的目的与最初已相去甚远。网络上数以千计的Bloggers发表和张贴Blog的目的有很大的差异。因为它也逐渐被应用在企业内
+							部网络（Intranet）。截至2013年，BSP商家风起云涌，已有数十家大型博客站点。新浪博客，网易博客，搜狐博客，腾讯博客，博客中国等
+						</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>开发时长：</dt>
+					<dd>
+						前端：30分钟左右；
+						后端：目前js模拟........；
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div id="3" class="muban_div">
+			<dl><dt><h1>模板--julysummer</h1></dt><dd>一个个人博客网站。</dd></dl>
+			<div class="img_muban"><a href="http://julysummer.sinaapp.com/diary.html" target="_blank"><img src="images/julysummer.png"></a></div>
+			<div>
+				<dl>
+					<dt>名称由来：</dt>
+					<dd>
+						<p>
+							julysummer即‘七夏’，是一个轻量级博客.
+						</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>博客功能</dt>
+					<dd>
+						<p>
+							1、发布自己的心得，及时有效轻松地与他人进行交流。
+							2、分享各种编程或者其他经验或技术。
+							3、记录生活中的点滴成长。
+							4、分享相片以及视频.
+						</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>博客的历史由来:</dt>
+					<dd>
+						<p>
+							julysummer，可以说是我的第二个开发的前端项目，第一个是用DW，全部拉出来的条条框框，简直不忍直视啊！^7^.
+							这个名为‘七夏’的博客是在暑假期间在边学习边开发的环境下写出来的，所以很多功能还没实现，还只是一个次品，仍需完善。并且还是用了bootstrap
+							框架。
+						</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>开发时长：</dt>
+					<dd>
+						前端：断断续续的一个月左右；
+						后端：目前js模拟........；
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div id="4" class="muban_div">
+			<dl><dt><h1>模板--simpleweb</h1></dt><dd>一个个人博客网站。</dd></dl>
+			<div class="img_muban"><a href="404.html" target="_blank"><img src="images/simpleweb.png"></a></div>
+			<div>
+				<dl>
+					<dt>名称：</dt>
+					<dd>
+						<p>
+							simpleweb，是一个轻量级博客.
+						</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>博客功能</dt>
+					<dd>
+						<p>
+							1、发布自己的心得，及时有效轻松地与他人进行交流。
+							2、分享各种编程或者其他经验或技术。
+							3、记录生活中的点滴成长。
+							4、分享相片以及视频.
+						</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>博客的历史由来:</dt>
+					<dd>
+						<p>
+							简易迅速便捷地发布自己的心得，及时有效轻松地与他人进行交流，
+							再集丰富多彩的个性化展示于一体的综合性平台。不同的博客可能使用不同的编码，所以相互之间也不一定兼容。
+							而且，很多博客都提供丰富多彩的模板等功能，这使得不同的博客各具特色。
+						</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>开发时长：</dt>
+					<dd>
+						前端：30分钟左右；
+						后端：目前js模拟........；
+					</dd>
+				</dl>
+			</div>
+		</div>
+	<div style="width: 60%;height: 60px; text-align: center; background: #336699; margin: 0 auto; font-size: 24px;">模板下载功能正在开发中。。。敬请等待.<form action="" method="post"><input type="submit" value="下载模板"></form></div>	
+		
+		<!--give me a word-->
+		<div class="firstdiv" >
+         <div class="seconddiv" >
+         	<span class="myword">座右铭：<p id="zuoYouMing">从不羡慕别人的优秀，因为相信自己也可以优秀。闲下来时看看书，书本里的故事，总有你学到的人生。</p></span>
+             <span class="span">留下你的言语吧：</span>
+             <div class="ii">
+             		<textarea id="dome" cols="56" rows="6"></textarea>
+                 	<!--let you know the time-->
+				   <div id="module_time" class="time_temp"><!--时间-->
+						<h3>Here is the time:<br></h3>
+						<span class="time" id="countTime"></span>
+				  </div>
+             </div>
+             <br/>
+             <span class="btn"><input type="button" value="发表" onclick="saveStorage('dome');"></span>
+             <span class="btn"><input type="button" value="查看留言" onclick="loadStorage('msg');"></span>
+             <hr>
+             <h3>留言内容</h3>
+             <div class="leavewordeshow"><p id="msg"><br/></p></div>
+         </div>
+     </div>
+		<div class="scroll" id="scroll" style="display:none;">
+		回到<br>顶部
+	</div>
+	<footer>
+			<div class="ft-info">
+				<ul class="ft-first">
+					<li><a href="#" class="title">博客首页</a></li>
+					<li><a href="#">建博工具</a></li>
+					<li><a href="#">友情链接</a></li>
+				</ul>
+				<ul class="ft-second">
+					<li><a href="#" class="title">联系与合作</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">用户反馈</a></li>
+				</ul>	
+				<p id="beihao" >Design by:小袁 <br><span>湘ICP备********号-2</span></p>
+			</div>
+			
+			<div class="ft-info2">
+				<ul>
+					<li><a href="#" class="title">关注我们</a></li>
+					<li><a href="#">微博：@xxxxx</a></li>
+					<li>QQ:959670036</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>

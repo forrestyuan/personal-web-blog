@@ -1,0 +1,5 @@
+JDK_INSTALLATION_NAME=jre1.8.0_66
+TOMCAT_BASE=D\:\\xampp\\tomcat
+TOMCAT_HOME=D\:\\xampp\\tomcat
+TOMCAT_TEMP=D\:\\xampp\\tomcat\\temp
+eclipse.preferences.version=1

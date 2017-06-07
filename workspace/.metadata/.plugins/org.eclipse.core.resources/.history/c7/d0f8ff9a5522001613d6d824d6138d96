@@ -1,0 +1,39 @@
+package com.yfc.dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.yfc.toolBean.CommonADO;
+import com.yfc.valueBean.AdminBean;
+
+public class AdminDao {
+	private CommonADO commonADO;
+	public AdminDao(){
+		commonADO=CommonADO.getCommonADO();
+	}
+	
+	/**
+	 * @功能 查询博主的信息
+	 * @返回 封装了博主信息的AdminBean实例对象
+	 */
+	public AdminBean queryAdminInfo(){
+		AdminBean adb=new AdminBean();
+		String sql="select * from admin";
+		ResultSet rs=commonADO.executeSelect(sql);
+		try {
+			while(rs.next()){
+				//adb.setAdminId(rs.getInt("adminId"));
+				adb.setUserName(rs.getString("userName"));
+				//adb.setPassword(rs.getString("password"));
+				adb.setQq(rs.getString("qq"));
+				adb.setEmail(rs.getString("email"));
+				adb.setSex(rs.getString("sex"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return adb;
+	}
+}

@@ -1,0 +1,47 @@
+package com.yfc.servlet;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import com.yfc.valueBean.ArticleBean;
+
+public class doSearch extends HttpServlet {
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doPost(request, response);
+		
+	}
+
+	/**
+	 * The doPost method of the servlet. <br>
+	 *
+	 * This method is called when a form has its tag value method equals to post.
+	 * 
+	 * @param request the request send by the client to the server
+	 * @param response the response send by the server to the client
+	 * @throws ServletException if an error occurred
+	 * @throws IOException if an error occurred
+	 */
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		String search1=request.getParameter("search");
+		if(!search1.equals("")){
+			DosearchDao atd=new DosearchDao();
+			List<ArticleBean> articleList=atd.getTosearch(search1);
+			request.setAttribute("searchArticle", articleList);
+			RequestDispatcher rdp=request.getRequestDispatcher("front/result.jsp");
+			rdp.forward(request, response);
+		}else{
+			RequestDispatcher rdp=request.getRequestDispatcher("front/error.jsp");
+			rdp.forward(request, response);
+		}
+	}
+
+}

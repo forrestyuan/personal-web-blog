@@ -1,0 +1,9 @@
+package yfc118.valuebean;
+
+public class LeaveWordBean {
+	private int id;
+	private String leaveWordContent;
+	private String leaveWordTitle;
+	private String leaveWordTime;
+	private String leaveWordEmail;
+}

@@ -1,0 +1,43 @@
+package com.yxq.toolsbean;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class MyTools {
+	public static String changeHTML(String value){
+		value=value.replaceAll("&","&amp;");
+		value=value.replaceAll(" ","&nbsp;");
+		value=value.replaceAll("<","&lt;");
+		value=value.replaceAll(">","&gt;");
+		value=value.replaceAll("\r\n","<br>");
+		return value;
+	}
+	
+	public static int strToint(String value){
+		int i=-1;
+		if(value==null||value.equals(""))
+			return i;
+		try{
+			i=Integer.parseInt(value);
+		}catch(NumberFormatException e){
+			i=-1;
+			e.printStackTrace();
+		}
+		return i;
+	}
+	
+    public  static String  toChinese(String value) {
+    	if (value == null)
+    		return "";
+    	try {
+            value = new String(value.getBytes("ISO8859_1"), "gb2312");
+            return value;
+        } catch (Exception e) {
+            return "";
+        }
+    }
+	public static String changeTime(Date date) {
+		SimpleDateFormat format=new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
+		return format.format(date);		
+	}
+}

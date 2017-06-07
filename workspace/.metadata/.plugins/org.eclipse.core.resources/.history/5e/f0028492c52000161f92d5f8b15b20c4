@@ -1,0 +1,50 @@
+package com.cjg.servlet;
+import java.io.IOException;
+import java.util.List;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import org.apache.commons.dbutils.handlers.MapListHandler;
+import com.cjg.tool.*;
+
+public class AdminUserServlet extends HttpServlet {
+	private static final long serialVersionUID = 5801558969966197290L;
+
+	public void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String message = "";
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+
+		if (StringTool.validateNull(username)) {
+			message = "对不起，姓名不能为空，请您重新输入！<br>";
+		} else if (StringTool.validateNull(password)) {
+			message = "对不起，密码不能为空，请您重新输入！<br>";
+		} else {
+			String param[] = { username, password };
+			SQLServerTool db = new SQLServerTool("java:/comp/env/jdbc/book");
+			db.init();
+			List result = (List) db.query("select id from admin where username=? and password=?", param,
+					new MapListHandler());
+			if (result.size() == 0) {
+				message = "对不起，用户名或者密码错误";
+				request.setAttribute("guesbook.admin.login.message", message);
+				request.getRequestDispatcher("/admin/loginFail.jsp").forward(request, response);
+			} else {
+				HttpSession session = request.getSession();
+				session.setAttribute("guesbook.admin.username", username);
+				response.sendRedirect(request.getContextPath()+"/admin/secure/manage?q=list");
+			}
+		}
+
+	}
+
+	public void logout(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	}
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	}
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+}

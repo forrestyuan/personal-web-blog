@@ -1,0 +1,122 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page import="com.yfc.valueBean.*" %>
+<%@ page import="javax.servlet.http.HttpSession"%>
+<%@ page import="javax.servlet.http.HttpServletRequest" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%
+	String path = request.getContextPath();
+	pageContext.setAttribute("ctx",path);
+%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>julysummer</title>
+		<link rel="stylesheet" href="${ctx}/front/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="${ctx}/front/css/all.css" />
+		<link rel="stylesheet" href="${ctx}/front/css/index.css" />
+	</head>
+	<body>
+	<header>
+		<!--大图区-->
+	    <div class="jumbotron">
+	      	<img id="changeimg" src="${ctx}/front/img/bg.jpg" alt="background-img" />
+	      	<div class="board">
+	        	<h1>Beautiful World</h1>
+	        	<h2 id="wordchange">write the code，<br>run the world。</h2>
+		  	</div>  
+	    </div>
+	    <!--导航栏-->
+		<nav id="nav1" class="navbar navbar-inverse ">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand">ForrestYuan</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="${ctx}/">首页<span class="sr-only">(current)</span></a></li>
+		        <li><a href="learn">学无止境</a></li>
+		        <li><a href="light">光影点滴</a></li>
+		        <li><a href="leave">留言板</a></li>
+		         <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多<span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="${ctx}/About.jsp">关于我</a></li>
+		            <li id="addFavorite" ><a href="javascript:void(0)">点我收藏</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		  	<%@ include file="searchMoudle.jsp" %>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+	</header>
+<!--***********************************************主题内容**************************************************-->
+
+	<!--主体内容-->
+    <section class="container main">
+    	<!--左边部分-->
+    <div class="col-md-4">
+    	<div class="leftInfo">
+    		<h3 class="eyerow">博客主人:</h3>
+		   	<div class="admin_info">
+		   		<table>
+		   			<tr>
+		   				<td><img src="${ctx}/front/img/load2.gif" alt="" /></td>
+		   				<td>
+		   					<span>Name:<c:out value="${adminInfo.userName}"/></span>
+		   					<span>QQ:<c:out value="${adminInfo.qq}"/></span>
+		   					<span>Email:<c:out value="${adminInfo.email}"/></span>
+		   					<span>Wechat:sumaverage</span>
+		   				</td>
+		   			</tr>
+		   		</table>
+		   	</div>
+    	</div>
+    	<div class="leftInfo">
+    		<h3 class="eyerow">Show Time:</h3>
+		    <h3 id="countTime"></h3>
+    	</div>
+    	<div class="leftInfo">
+    		<h3 class="eyerow">Cloud Tag:</h3>
+		    <div class="cloud">
+			    <c:forEach items="${typeList}"  var="gb">
+			   		<span><a href="learn?type=<c:out value="${gb.type}"/>"><c:out value="${gb.type}"/></a></span>	
+			    </c:forEach>
+		    </div>
+    	</div>
+    </div>
+    <!--右边部分-->
+    <div id="list" class="col-md-8">
+    	<div class="article" id="getMore">
+    	<h3 class="eyerow">Last But Not Leaset Articles：</h3>
+    	<c:forEach items="${articleList}"  var="arti">
+	    	<div class="article">
+	    		<h2 class="h2"><c:out value="${arti.title}"/><span><img src="${ctx}/front/img/bea.gif" alt="" /></span></h2>
+	    		<div class="article_Info">
+	    			<span>文章类型：<c:out value="${arti.type}"/></span>
+	    			<span>发布日期：<c:out value="${arti.time}"/></span>
+	    			<span>浏览数：<c:out value="${arti.viewCounts}"/></span>
+	    			<span>评论数：<c:out value="${arti.discussCounts}"/></span>
+	    		</div>
+			    <p><c:out value="${arti.description}"/></p>
+			    <p><a class="btn btn-success" href="${ctx}/detail?id=<c:out value="${arti.articleId}"/>" role="button">详细阅读&raquo;</a></p>
+	    	</div>
+	     </c:forEach>
+    	</div>
+    	<div class="col-md-12 load_con"><span onclick="loadMore();" class="h3 buttonLoad">Loading More</a><img width="50px" height="30px" src="${ctx}/front/img/load.gif" alt="" /></span></div>
+    </div>
+    </section> <!-- /container -->
+    
+<!--******************************************主题内容结束********************************************-->
+    <!--脚部-->
+<%@ include file="footerMoudle.jsp" %>

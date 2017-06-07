@@ -1,0 +1,25 @@
+/*Saylist*/
+#main{margin: 0 auto;width: 1003px;margin-bottom:100px;border-bottom: 2px solid #CCCCCC;}
+#main #s_about{width:1000px;background-color:#fff;background:url("../images/line.jpg") 15px 60px repeat-x;}
+#s_about .tongy{width:980px;height:70px; background:url("../images/bi.jpg") no-repeat;}
+#s_about .tongy p{font-size:16px; color:#EC6104;float:right;padding:30px 10px 0px 0px;}
+#s_about #a_say{width:1000px;}
+#s_about .say_out{width:1000px;height:130px;}
+
+/*left*/
+.say_out .my_pic{display:inline-block; width:100px;height:130px;background:url("../images/line.jpg") 0px 0px repeat-y;
+filter:Alpha(opacity=90);-moz-opacity: 0.9; opacity: 0.9;margin-left:15px; }
+.say_out .my_pic img{border-radius:50px;margin:5px auto;}
+
+/*right*/
+.say_out .my_text{position:absolute;right:0;width:840px;height:100px;background:#f8f8f8;display:inline-block;
+					border-radius:5px;border:1px solid #E2DFDF;
+					font-size:14px;font-family:"宋体"; margin-top:10px;color:#10200A;}
+.my_text p{width:810px;height:70px;padding:10px 10px;}
+.my_text p span{display:block;width:85px;height:25px;line-height:25px;background:#EE5A5A;border-radius:3px;
+					text-align:center;color:#fff;position:absolute;right:18px;bottom:32px;font-size:14px;}
+.say_out:before {content: "";width:0px;height:0px;border-style:solid;border-width:0px 0 20px 22px;border-color:transparent transparent transparent #fff;position:absolute;left:115px;top: 42px; }/* 三角形 */
+.say_out:after {content: "";width: 10px;height: 10px;border-radius: 50%;position:absolute;left:139px;top:38px;background:#CCCCCE;border: 2px solid #fff;transition:all 0.5s; }/* 圆形 */
+.say_out:hover::before {border-color:transparent transparent transparent #EC6104}/* 三角形 */
+.say_out:hover::after {border:#fff 2px solid;background:#999; }/* 圆形 */
+.my_text:hover {background: #f4f2f2;color:#C0C0C0; }

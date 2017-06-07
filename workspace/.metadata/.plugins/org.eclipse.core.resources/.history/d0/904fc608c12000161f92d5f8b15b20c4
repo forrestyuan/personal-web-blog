@@ -1,0 +1,60 @@
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page import="com.cjg.servlet.MessageBook"%>
+
+
+<style>
+* {font-family: "宋体";font-size: 14px}
+</style>
+<center>
+	<a href="">添加新的留言内容</a>|<a href="">管理员登录</a><br><br>
+	留言内容<br><br>	
+		
+	<table width="600" border="1" bordercolor="000000"
+		style="table-layout: fixed; word-break: break-all">
+		<tr>
+			<td width="100" bordercolor="ffffff">
+				编号:
+			</td>
+			<td width="500" bordercolor="ffffff"></td>
+		</tr>
+		<tr>
+			<td bordercolor="ffffff">
+				姓名:
+			</td>
+			<td bordercolor="ffffff"></td>
+		</tr>
+		<tr>
+			<td bordercolor="ffffff">
+				电话:
+			</td>
+			<td bordercolor="ffffff"></td>
+		
+		</tr>
+		<tr>
+			<td bordercolor="ffffff">
+				email:
+			</td>
+			<td bordercolor="ffffff"></td>
+		</tr>
+		<tr>
+			<td bordercolor="ffffff">
+				主题:
+			</td>
+			<td bordercolor="ffffff"></td>
+		</tr>
+		<tr>
+			<td valign="top" bordercolor="ffffff">
+				内容:
+			</td>
+			<td valign="top" bordercolor="ffffff"></td>
+		</tr>
+		<tr>
+			<td bordercolor="ffffff">
+				时间:
+			</td>
+			<td bordercolor="ffffff"></td>
+		</tr>
+	</table>
+	<br>
+		
+</center>

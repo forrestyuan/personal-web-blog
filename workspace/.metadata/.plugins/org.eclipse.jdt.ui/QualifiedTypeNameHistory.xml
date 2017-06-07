@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="yfc118.valuebean.AdminBean"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="yfc118.valuebean.ArticleBean"/>
+<fullyQualifiedTypeName name="com.cjg.tool.StringTool"/>
+<fullyQualifiedTypeName name="com.cjg.tool.SQLServerTool"/>
+<fullyQualifiedTypeName name="yfc118.toolsbean.CommonADO"/>
+<fullyQualifiedTypeName name="yfc118.dao.Article"/>
+<fullyQualifiedTypeName name="com.yfc.toolBean.showRecordByPage"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="com.yfc.valueBean.LeaveBean"/>
+<fullyQualifiedTypeName name="com.yfc.dao.LeaveDao"/>
+<fullyQualifiedTypeName name="com.yfc.valueBean.DiscussBean"/>
+<fullyQualifiedTypeName name="com.yfc.toolBean.CommonADO"/>
+<fullyQualifiedTypeName name="com.yfc.toolBean.StringTool"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.OutOfMemoryError"/>
+<fullyQualifiedTypeName name="sun.misc.Request"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="com.yfc.toolBean.changeCoding"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="com.yfc.valueBean.AdminBean"/>
+<fullyQualifiedTypeName name="sun.misc.Perf.GetPerfAction"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern"/>
+<fullyQualifiedTypeName name="java.util.regex.Matcher"/>
+<fullyQualifiedTypeName name="com.yfc.valueBean.ArticleBean"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.yfc.valueBean.PhotoBean"/>
+<fullyQualifiedTypeName name="com.yfc.toolBean.MD5"/>
+<fullyQualifiedTypeName name="java.io.DataInputStream"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="com.yfc.toolBean.DateGet"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>

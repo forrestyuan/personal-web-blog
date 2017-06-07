@@ -1,0 +1,61 @@
+package yfc118.valuebean;
+
+public class ArticleBean {
+	private int id;
+	private String title;
+	private String article;
+	private String info;
+	private String tag;
+	private String pubTime;
+	private int count;
+	private int review;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getArticle() {
+		return article;
+	}
+	public void setArticle(String article) {
+		this.article = article;
+	}
+	public String getInfo() {
+		return info;
+	}
+	public void setInfo(String info) {
+		this.info = info;
+	}
+	public String getTag() {
+		return tag;
+	}
+	public void setTag(String tag) {
+		this.tag = tag;
+	}
+	public String getPubTime() {
+		return pubTime;
+	}
+	public void setPubTime(String pubTime) {
+		this.pubTime = pubTime;
+	}
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
+	public int getReview() {
+		return review;
+	}
+	public void setReview(int review) {
+		this.review = review;
+	}
+	
+}

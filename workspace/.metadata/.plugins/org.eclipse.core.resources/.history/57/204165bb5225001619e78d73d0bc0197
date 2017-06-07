@@ -1,0 +1,15 @@
+function activeInput(){
+	var tag2=document.getElementById("adInfo2");
+	var tag1=document.getElementById("adInfo1");
+	var tag3=document.getElementById("adInfo3");
+	var tag4=document.getElementById("adInfo4");
+	var tag5=document.getElementById("adInfo5");
+	var tag6=document.getElementById("adInfo6");
+	tag1.setAttribute("hidden","hidden");
+	tag2.setAttribute("hidden","hidden");
+	tag3.setAttribute("hidden","hidden");
+	tag4.removeAttribute('hidden');
+	tag5.removeAttribute('hidden');
+	tag6.removeAttribute('hidden');
+	document.getElementById("save").style.display="inline-block";
+}

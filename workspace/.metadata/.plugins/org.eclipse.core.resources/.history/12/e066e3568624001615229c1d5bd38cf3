@@ -1,0 +1,34 @@
+﻿
+/*learn页面*/
+/*清楚格式*/
+a{text-decoration: none; color: white;}
+a:hover{text-decoration: none;color: white;}
+/*webxiangmu*/
+.xiangmu{width:100%;text-align: center;position:relative;}
+figure{padding-top:5px;width:30%;height:auto;background-color:#E7E7E7;border: 1px solid #eee;text-align: center;display: inline-block;margin:5px 5px 0 5px;}
+figure img{width:98%;height:180px;}
+figcaption{width:100%;font-size:13px;color:#222;}
+figure:hover{transition: all 0.5s;-webkit-transition: all 0.5s; -moz-transition: all 0.5s;-ms-transition: all 0.5s; -moz-transition: all 0.5s;
+			transform:scale(1.05,1.05);-webkit-transform: scale(1.05,1.05);-moz-transform: scale(1.05,1.05);-ms-transform: scale(1.05,1.05);-moz-transform: scale(1.05,1.05);
+			}
+figcaption span{background-color:black; color:white;}
+/*加载按钮事件*/
+.overlay{position:relative;font-size:20px;font:bolder;background:#F7ECB5;text-align:center;height:40px;width:30%;margin:50px auto 0 auto;clear:both;}
+.overlay hr{height: 10px;bottom:0;margin: 0;position: absolute;z-index:100;width: 100%;}
+.overlay:hover hr{background-color:slateblue;}
+.overlay:hover{cursor:pointer ;color:#46B8DA;}
+
+/*分类*/
+.new_type{display: inline-block;list-style:none;width: 100%;text-align: center;margin: 10px;}
+.new_type li{background-color:#222;color:#00BFFF;cursor:pointer;display:inline-block;list-style: none;height:30px;width:8em;border-radius:5px;}
+.new_type li:hover{background-color:#00FF7F;color:white;}
+.new_type li{font-size: 20px;}
+.new_type li:first-child{background-color:#00FF7F;}
+/*主体*/
+.new-main{width:100%;overflow:hidden;}
+#sec-new1{background-color:rgba(0,0,0,0.5);position: relative;}
+
+
+
+
+
